@@ -57,9 +57,9 @@ public class UI_Tip : UI_WindowBase
         string textBtnYesContentKey = "Confirm", string textBtnNoContentKey = "Cancel", UnityAction closeOnClick = null)
     {
         m_TipType = type;
-        SelectableManager.Instance.Lock = true;
+        SelectableSystem.Lock = true;
         bool hasCancel = type == TipType.Confirm || type == TipType.Warning;
-        InputManager.Instance.AddListenerSubmit(OnClickYes);
+        JKInputSystem.AddListenerSubmit(OnClickYes);
         switch (type)
         {
             case TipType.Information:
@@ -77,7 +77,7 @@ public class UI_Tip : UI_WindowBase
         }
         if (hasCancel)
         {
-            InputManager.Instance.AddListenerCancel(OnClickNo);
+            JKInputSystem.AddListenerCancel(OnClickNo);
             m_TextBtnCancel.text = LocalizationSystem.GetContentText(Btn, textBtnNoContentKey);
         }
 
@@ -91,7 +91,7 @@ public class UI_Tip : UI_WindowBase
         if (closeOnClick != null)
         {
             m_OnClose = closeOnClick;
-            InputManager.Instance.AddListenerActionX(OnClickClose);
+            JKInputSystem.AddListenerActionX(OnClickClose);
         }
         m_CGroup.DOFade(1, 0.5f);
     }
@@ -101,17 +101,17 @@ public class UI_Tip : UI_WindowBase
         base.OnClose();
         m_CGroup.DOFade(0, 0.5f).OnComplete(delegate
         {
-            SelectableManager.Instance.Lock = false;
+            SelectableSystem.Lock = false;
         });
     }
 
     public void RemoveInputListenter()
     {
-        InputManager.Instance.RemoveListenerSubmit(OnClickYes);
+        JKInputSystem.RemoveListenerSubmit(OnClickYes);
         if (m_TipType == TipType.Confirm || m_TipType == TipType.Warning)
-            InputManager.Instance.RemoveListenerCancel(OnClickNo);
+            JKInputSystem.RemoveListenerCancel(OnClickNo);
         if (m_OnClose != null)
-            InputManager.Instance.RemoveListenerActionX(OnClickClose);
+            JKInputSystem.RemoveListenerActionX(OnClickClose);
     }
 
     public void OnClickYes()

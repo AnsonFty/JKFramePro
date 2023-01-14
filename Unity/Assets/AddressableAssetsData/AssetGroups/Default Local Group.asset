@@ -21,6 +21,18 @@ MonoBehaviour:
     m_Address: UI_StartGame
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: 5f4302a3dc79ab2409e067cfb1e6890f
+    m_Address: UI_Setting
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: bc99e983c371616438499b0353ff6949
+    m_Address: UI_Tip
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 301a8a95be6d08b42a759c8d64ea3982
+    m_Address: UI_Dialog
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: bd100e4701bd7714f9ce04ce493d6efa, type: 2}
   m_SchemaSet:

@@ -1,5 +1,6 @@
 ﻿using System;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 namespace JKFrame
 {
@@ -9,7 +10,7 @@ namespace JKFrame
     public class UI_WindowBase : MonoBehaviour
     {
         // 窗口类型
-        public Type Type { get { return this.GetType(); } }
+        public Type Type { get { return GetType(); } }
 
         /// <summary>
         /// 初始化
@@ -19,16 +20,16 @@ namespace JKFrame
         /// <summary>
         /// 显示前初始化
         /// </summary>
-        public virtual void OnInit() { }
-
-        /// <summary>
-        /// 显示
-        /// </summary>
-        public virtual void OnShow()
+        public virtual void OnInit()
         {
             OnUpdateLanguage();
             RegisterEventListener();
         }
+
+        /// <summary>
+        /// 显示
+        /// </summary>
+        public virtual void OnShow() { }
 
         /// <summary>
         /// 关闭
@@ -36,7 +37,6 @@ namespace JKFrame
         public void Close()
         {
             UISystem.Close(Type);
-            OnClose();
         }
         /// <summary>
         /// 关闭时额外执行的内容
@@ -51,13 +51,20 @@ namespace JKFrame
         /// </summary>
         protected virtual void RegisterEventListener()
         {
+            JKEventSystem.AddEventListener("UpdateLanguage", OnUpdateLanguage);
         }
         /// <summary>
         /// 取消事件
         /// </summary>
         protected virtual void CancelEventListener()
         {
+            JKEventSystem.RemoveEventListener("UpdateLanguage", OnUpdateLanguage);
         }
         protected virtual void OnUpdateLanguage() { }
+
+        protected void ResetSelect()
+        {
+            EventSystem.current.SetSelectedGameObject(null);
+        }
     }
 }

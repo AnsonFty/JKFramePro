@@ -21,7 +21,7 @@ public class UI_StartGame : UI_WindowBase
     {
         base.Init();
         m_CGroupMainMenu.alpha = 0;
-        SelectableManager.Instance.AddSelectable(m_SGroup);
+        SelectableSystem.AddSelectable(m_SGroup);
     }
 
     public override void OnShow()

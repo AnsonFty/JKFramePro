@@ -38,6 +38,7 @@ namespace JKFrame
             {
                 if (enableMask == false) return;
                 maskImage.raycastTarget = count != 0;
+                maskImage.name = $"Mask{count}";
                 int posIndex = root.childCount - 2;
                 maskImage.transform.SetSiblingIndex(posIndex < 0 ? 0 : posIndex);
             }
@@ -224,13 +225,19 @@ namespace JKFrame
         private static UI_WindowBase Show(UIWindowData windowData, int layer = -1)
         {
             int layerNum = layer == -1 ? windowData.layerNum : layer;
+            windowData.layerNum = layerNum;
             // 实例化实例或者获取到实例，保证窗口实例存在
             if (windowData.instance != null)
             {
                 windowData.instance.OnInit();
-                windowData.instance.gameObject.SetActive(true);
-                windowData.instance.transform.SetParent(UILayers[layerNum].root);
-                windowData.instance.transform.SetAsLastSibling();
+                GameObject obj = windowData.instance.gameObject;
+                if (!obj.activeInHierarchy)
+                {
+                    UILayers[layerNum].OnWindowShow();
+                    obj.SetActive(true);
+                }
+                obj.transform.SetParent(UILayers[layerNum].root);
+                obj.transform.SetAsLastSibling();
                 windowData.instance.OnShow();
             }
             else
@@ -240,11 +247,10 @@ namespace JKFrame
                 windowData.instance = window;
                 window.Init();
                 window.OnInit();
+                UILayers[layerNum].OnWindowShow();
                 window.gameObject.SetActive(true);
                 window.OnShow();
             }
-            windowData.layerNum = layerNum;
-            UILayers[layerNum].OnWindowShow();
             return windowData.instance;
         }
         #endregion

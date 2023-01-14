@@ -6,7 +6,10 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/SampleScene.unity
+    path: Assets/JKFrame/Demo/Scenes/DEMOScene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/JKFrame/Demo/Scenes/Map/DEMOHome.unity
+    guid: 6c4cee7f9f4a7354cb11e6261f57c0be
   m_configObjects:
     com.unity.addressableassets: {fileID: 11400000, guid: a9abdd9889c041541b3e875be5f1db98, type: 2}

@@ -53,7 +53,7 @@ public class UI_Dialog : UI_WindowBase
     public override void OnInit()
     {
         base.OnInit();
-        InputManager.Instance.StartUI();
+        JKInputSystem.StartUI();
         ResetText();
         timer = 0;
         m_LineIndex = 0;
@@ -69,7 +69,7 @@ public class UI_Dialog : UI_WindowBase
         m_Contents = null;
         m_CloseCallBack = null;
         m_Dialogs = null;
-        InputManager.Instance.StartRole();
+        JKInputSystem.StartRole();
     }
 
     /// <summary>

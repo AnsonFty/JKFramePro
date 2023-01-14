@@ -75,10 +75,10 @@ namespace JKFrame
         {
             if (isActive)
             {
-                InputManager.Instance.AddListenerLeftStickLeftRight(LastLanguage, NextLanguage);
+                JKInputSystem.AddListenerLeftStickLeftRight(LastLanguage, NextLanguage);
                 return;
             }
-            InputManager.Instance.RemoveLeftStickLeftRight();
+            JKInputSystem.RemoveLeftStickLeftRight();
         }
 
         public static void LastLanguage()

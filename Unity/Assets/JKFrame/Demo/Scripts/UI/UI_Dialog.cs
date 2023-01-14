@@ -224,7 +224,7 @@ public class UI_Dialog : UI_WindowBase
         int index = 0;
         string dialogId = $"{id}_{index}";
         List<Dialog> dialogs = new List<Dialog>();
-        Table table = LocalizationSystem.Table;
+        Table table = TableSystem.Table;
         while (table.DialogByID.ContainsKey(dialogId))
         {
             dialogs.Add(table.DialogByID[dialogId]);

@@ -44,9 +44,10 @@ public class UI_StartGame : UI_WindowBase
     {
         m_CGroupMainMenu.DOFade(0, 0.5f).OnComplete(delegate
         {
-            SceneSystem.LoadSceneAsync("DEMOHome", delegate
+            SceneSystem.LoadSceneAsync("DEMOHome", (value) =>
             {
-                m_CGroupBg.DOFade(0, 0.5f).OnComplete(Close);
+                if (value >= 1)
+                    m_CGroupBg.DOFade(0, 0.5f).OnComplete(Close);
             });
         });
     }

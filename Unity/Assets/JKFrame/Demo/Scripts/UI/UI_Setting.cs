@@ -126,15 +126,10 @@ public class UI_Setting : UI_WindowBase
         LocalizationSystem.CurrentLanguageType = (LanguageType)m_Setting.Language;
     }
 
-    public override void OnInit()
+    public override void OnShow()
     {
         m_Setting = ConfigManager.Instance.Setting;
         m_SettingTemp = new SettingConfig(m_Setting);
-        base.OnInit();
-    }
-
-    public override void OnShow()
-    {
         base.OnShow();
         m_ToggleMusicMute.isOn = m_Setting.MusicIsMute;
         m_SliderMusicVolume.value = m_Setting.MusicVolume;

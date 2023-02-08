@@ -10,7 +10,7 @@ public class EventConfig
     {
         if (kv.ContainsKey(id))
             return kv[id];
-        kv.Add(id, LocalizationSystem.Table.EventByID[id].Value);
+        kv.Add(id, TableSystem.Table.EventByID[id].Value);
         return kv[id];
     }
 

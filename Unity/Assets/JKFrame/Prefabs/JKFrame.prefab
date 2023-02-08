@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 1657696711}
   - component: {fileID: 1657696710}
   - component: {fileID: 6029324473076240864}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: UISystem
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -149,14 +149,14 @@ GameObject:
   m_Component:
   - component: {fileID: 1866637783}
   - component: {fileID: 1866637782}
-  - component: {fileID: 1415073706054393161}
+  - component: {fileID: 1866637781}
   m_Layer: 0
   m_Name: EventSystem
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1866637783
 Transform:
   m_ObjectHideFlags: 0
@@ -187,7 +187,7 @@ MonoBehaviour:
   m_FirstSelected: {fileID: 0}
   m_sendNavigationEvents: 1
   m_DragThreshold: 10
---- !u!114 &1415073706054393161
+--- !u!114 &1866637781
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -196,27 +196,17 @@ MonoBehaviour:
   m_GameObject: {fileID: 1866637780}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 01614664b831546d2ae94a42149d80ac, type: 3}
+  m_Script: {fileID: 11500000, guid: 4f231c4fb786f3946a6b90b886c48677, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_SendPointerHoverToParent: 1
-  m_MoveRepeatDelay: 0.5
-  m_MoveRepeatRate: 0.1
-  m_XRTrackingOrigin: {fileID: 0}
-  m_ActionsAsset: {fileID: -944628639613478452, guid: 5a93b2d2573cdbb428bcadb20043c043, type: 3}
-  m_PointAction: {fileID: -8105165460961415042, guid: 5a93b2d2573cdbb428bcadb20043c043, type: 3}
-  m_MoveAction: {fileID: -8281959194477183546, guid: 5a93b2d2573cdbb428bcadb20043c043, type: 3}
-  m_SubmitAction: {fileID: -5080011790755001359, guid: 5a93b2d2573cdbb428bcadb20043c043, type: 3}
-  m_CancelAction: {fileID: -1967631576421560919, guid: 5a93b2d2573cdbb428bcadb20043c043, type: 3}
-  m_LeftClickAction: {fileID: -5820228988132413140, guid: 5a93b2d2573cdbb428bcadb20043c043, type: 3}
-  m_MiddleClickAction: {fileID: 2392796649880322570, guid: 5a93b2d2573cdbb428bcadb20043c043, type: 3}
-  m_RightClickAction: {fileID: -2146491729450861600, guid: 5a93b2d2573cdbb428bcadb20043c043, type: 3}
-  m_ScrollWheelAction: {fileID: -857410628105771204, guid: 5a93b2d2573cdbb428bcadb20043c043, type: 3}
-  m_TrackedDevicePositionAction: {fileID: 8166921140124045001, guid: 5a93b2d2573cdbb428bcadb20043c043, type: 3}
-  m_TrackedDeviceOrientationAction: {fileID: -3868229696592601692, guid: 5a93b2d2573cdbb428bcadb20043c043, type: 3}
-  m_DeselectOnBackgroundClick: 1
-  m_PointerBehavior: 0
-  m_CursorLockBehavior: 0
+  m_HorizontalAxis: Horizontal
+  m_VerticalAxis: Vertical
+  m_SubmitButton: Submit
+  m_CancelButton: Cancel
+  m_InputActionsPerSecond: 10
+  m_RepeatDelay: 0.5
+  m_ForceModuleActive: 0
 --- !u!1 &181742617139831671
 GameObject:
   m_ObjectHideFlags: 0
@@ -228,7 +218,7 @@ GameObject:
   - component: {fileID: 4081342566049753021}
   - component: {fileID: 1141209989180464678}
   - component: {fileID: 8385329369925736353}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Layout0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -293,7 +283,7 @@ MonoBehaviour:
   m_BlockingObjects: 0
   m_BlockingMask:
     serializedVersion: 2
-    m_Bits: 55
+    m_Bits: 23
 --- !u!1 &362881156978034976
 GameObject:
   m_ObjectHideFlags: 0
@@ -305,7 +295,7 @@ GameObject:
   - component: {fileID: 1120337822023644061}
   - component: {fileID: 8849874512448374089}
   - component: {fileID: 1390487538669073251}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Mask
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -381,7 +371,7 @@ GameObject:
   - component: {fileID: 8593087385479084827}
   - component: {fileID: 7491465063636272187}
   - component: {fileID: 2001873209579708813}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Layout4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -446,7 +436,7 @@ MonoBehaviour:
   m_BlockingObjects: 0
   m_BlockingMask:
     serializedVersion: 2
-    m_Bits: 55
+    m_Bits: 23
 --- !u!1 &2350436240888515581
 GameObject:
   m_ObjectHideFlags: 0
@@ -458,7 +448,7 @@ GameObject:
   - component: {fileID: 6082065427338214586}
   - component: {fileID: 7100579899713781443}
   - component: {fileID: 6573071895554130514}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Layout1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -523,7 +513,7 @@ MonoBehaviour:
   m_BlockingObjects: 0
   m_BlockingMask:
     serializedVersion: 2
-    m_Bits: 55
+    m_Bits: 23
 --- !u!1 &3537296298513487678
 GameObject:
   m_ObjectHideFlags: 0
@@ -535,7 +525,7 @@ GameObject:
   - component: {fileID: 8069669075606212087}
   - component: {fileID: 8928788047315816328}
   - component: {fileID: 2139881306172775873}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Mask
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -611,7 +601,7 @@ GameObject:
   - component: {fileID: 5048333664613580757}
   - component: {fileID: 4259630523049482509}
   - component: {fileID: 6066443418592990689}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Mask
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -687,7 +677,7 @@ GameObject:
   - component: {fileID: 2539879437349246923}
   - component: {fileID: 1192954968086890143}
   - component: {fileID: 5299498809312262115}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Mask
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -762,7 +752,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5692054572725190667}
   - component: {fileID: 6087791291824049245}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: UITipsLayer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -822,7 +812,7 @@ GameObject:
   - component: {fileID: 5792477773102748304}
   - component: {fileID: 607047195547475346}
   - component: {fileID: 3928610369427524767}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: DragLayer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -898,7 +888,7 @@ GameObject:
   - component: {fileID: 1413165872596567487}
   - component: {fileID: 429598126826601728}
   - component: {fileID: 11106836973554853}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Layout3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -963,7 +953,7 @@ MonoBehaviour:
   m_BlockingObjects: 0
   m_BlockingMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 23
 --- !u!1 &5428058166735082406
 GameObject:
   m_ObjectHideFlags: 0
@@ -975,7 +965,7 @@ GameObject:
   - component: {fileID: 6536267891402734866}
   - component: {fileID: 6220994715086994164}
   - component: {fileID: 5935537646889387183}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Layout2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1040,7 +1030,7 @@ MonoBehaviour:
   m_BlockingObjects: 0
   m_BlockingMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 23
 --- !u!1 &5808869914173048016
 GameObject:
   m_ObjectHideFlags: 0
@@ -1052,7 +1042,7 @@ GameObject:
   - component: {fileID: 1390557527363706918}
   - component: {fileID: 2928749777669004249}
   - component: {fileID: 8376867584065289907}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Group
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1227,6 +1217,7 @@ MonoBehaviour:
   effectVolume: 0.5
   isMute: 0
   isLoop: 1
+  isPause: 0
 --- !u!82 &6029324473013266667
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1334,7 +1325,7 @@ GameObject:
   - component: {fileID: 7244273141470109199}
   - component: {fileID: 4629318150483705934}
   - component: {fileID: 383712221527020664}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Mask
   m_TagString: Untagged
   m_Icon: {fileID: 0}

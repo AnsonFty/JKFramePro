@@ -21,12 +21,12 @@ namespace Platformer
 
             //Add hit event
             hitInfo += HitDetected;
-            InputManager.Instance.AddListenerActionX(AttackCombo);
+            JKInputSystem.AddListenerActionX(AttackCombo);
         }
 
         public void OnDisable()
         {
-            InputManager.Instance.RemoveListenerActionX(AttackCombo);
+            JKInputSystem.RemoveListenerActionX(AttackCombo);
         }
 
         //Hit method

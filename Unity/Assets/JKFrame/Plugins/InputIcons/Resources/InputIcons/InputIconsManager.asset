@@ -1,0 +1,1170 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eab8ee0d4f7f91a4ca569ef0eacc2738, type: 3}
+  m_Name: InputIconsManager
+  m_EditorClassIdentifier: 
+  iconSetConfiguratorSO: {fileID: 11400000, guid: d9f6a2d5fd0df16419a30f0ab431893f, type: 2}
+  usedActionAssets:
+  - {fileID: -944628639613478452, guid: 5a93b2d2573cdbb428bcadb20043c043, type: 3}
+  controlSchemeName_Keyboard: Keyboard&Mouse
+  controlSchemeName_Gamepad: Gamepad
+  showAllInputOptionsInStyles: 1
+  multipleInputsDelimiter: ' <size=80%>/</size> '
+  compositeInputDelimiter: ', '
+  textDisplayForUnboundActions: Undefined
+  textDisplayLanguage: 0
+  actionNameRenamings:
+  - originalString: delta
+    outputString: Mouse
+  - originalString: position
+    outputString: Mouse
+  - originalString: leftbutton
+    outputString: Left Mouse Button
+  - originalString: rightButton
+    outputString: Right  Mouse Button
+  loadSavedInputBindingOverrides: 1
+  displayType: 0
+  inputStyleKeyboardDataList:
+  - binding:
+      m_Name: 
+      m_Id: 
+      m_Path: 
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: 
+      m_Flags: 0
+    isComposite: 1
+    isPartOfComposite: 0
+    tmproReferenceText: <style=Role/Move>
+    bindingName: Role/Move
+    inputStyleString: <sprite="Keyboard and Mouse" name="W"><sprite="Keyboard and
+      Mouse" name="UPARROW"><sprite="Keyboard and Mouse" name="S"><sprite="Keyboard
+      and Mouse" name="DOWNARROW"><sprite="Keyboard and Mouse" name="A"><sprite="Keyboard
+      and Mouse" name="LEFTARROW"><sprite="Keyboard and Mouse" name="D"><sprite="Keyboard
+      and Mouse" name="RIGHTARROW">
+    inputStyleString_singleInput: <sprite="Keyboard and Mouse" name="W"><sprite="Keyboard
+      and Mouse" name="UPARROW"><sprite="Keyboard and Mouse" name="S"><sprite="Keyboard
+      and Mouse" name="DOWNARROW"><sprite="Keyboard and Mouse" name="A"><sprite="Keyboard
+      and Mouse" name="LEFTARROW"><sprite="Keyboard and Mouse" name="D"><sprite="Keyboard
+      and Mouse" name="RIGHTARROW">
+    humanReadableString: W, UP ARROW, S, DOWN ARROW, A, LEFT ARROW, D, RIGHT ARROW
+    humanReadableString_singleInput: W, UP ARROW, S, DOWN ARROW, A, LEFT ARROW, D,
+      RIGHT ARROW
+  - binding:
+      m_Name: up
+      m_Id: e2062cb9-1b15-46a2-838c-2f8d72a0bdd9
+      m_Path: <Keyboard>/w
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: ;Keyboard&Mouse
+      m_Action: Move
+      m_Flags: 8
+    isComposite: 0
+    isPartOfComposite: 1
+    tmproReferenceText: <style=Role/Move/up>
+    bindingName: Role/Move/up
+    inputStyleString: <sprite="Keyboard and Mouse" name="W"> <size=80%>/</size> <sprite="Keyboard
+      and Mouse" name="UPARROW">
+    inputStyleString_singleInput: <sprite="Keyboard and Mouse" name="W">
+    humanReadableString: W <size=80%>/</size> UP ARROW
+    humanReadableString_singleInput: W
+  - binding:
+      m_Name: down
+      m_Id: 320bffee-a40b-4347-ac70-c210eb8bc73a
+      m_Path: <Keyboard>/s
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: ;Keyboard&Mouse
+      m_Action: Move
+      m_Flags: 8
+    isComposite: 0
+    isPartOfComposite: 1
+    tmproReferenceText: <style=Role/Move/down>
+    bindingName: Role/Move/down
+    inputStyleString: <sprite="Keyboard and Mouse" name="S"> <size=80%>/</size> <sprite="Keyboard
+      and Mouse" name="DOWNARROW">
+    inputStyleString_singleInput: <sprite="Keyboard and Mouse" name="S">
+    humanReadableString: S <size=80%>/</size> DOWN ARROW
+    humanReadableString_singleInput: S
+  - binding:
+      m_Name: left
+      m_Id: d2581a9b-1d11-4566-b27d-b92aff5fabbc
+      m_Path: <Keyboard>/a
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: ;Keyboard&Mouse
+      m_Action: Move
+      m_Flags: 8
+    isComposite: 0
+    isPartOfComposite: 1
+    tmproReferenceText: <style=Role/Move/left>
+    bindingName: Role/Move/left
+    inputStyleString: <sprite="Keyboard and Mouse" name="A"> <size=80%>/</size> <sprite="Keyboard
+      and Mouse" name="LEFTARROW">
+    inputStyleString_singleInput: <sprite="Keyboard and Mouse" name="A">
+    humanReadableString: A <size=80%>/</size> LEFT ARROW
+    humanReadableString_singleInput: A
+  - binding:
+      m_Name: right
+      m_Id: fcfe95b8-67b9-4526-84b5-5d0bc98d6400
+      m_Path: <Keyboard>/d
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: ;Keyboard&Mouse
+      m_Action: Move
+      m_Flags: 8
+    isComposite: 0
+    isPartOfComposite: 1
+    tmproReferenceText: <style=Role/Move/right>
+    bindingName: Role/Move/right
+    inputStyleString: <sprite="Keyboard and Mouse" name="D"> <size=80%>/</size> <sprite="Keyboard
+      and Mouse" name="RIGHTARROW">
+    inputStyleString_singleInput: <sprite="Keyboard and Mouse" name="D">
+    humanReadableString: D <size=80%>/</size> RIGHT ARROW
+    humanReadableString_singleInput: D
+  - binding:
+      m_Name: 
+      m_Id: 32a9ca60-fefe-4eec-81e4-3e3ac4174995
+      m_Path: <Keyboard>/q
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: Keyboard&Mouse
+      m_Action: RightUp
+      m_Flags: 0
+    isComposite: 0
+    isPartOfComposite: 0
+    tmproReferenceText: <style=Role/RightUp>
+    bindingName: Role/RightUp
+    inputStyleString: <sprite="Keyboard and Mouse" name="Q"> <size=80%>/</size> <sprite="Keyboard
+      and Mouse" name="NUMPAD8">
+    inputStyleString_singleInput: <sprite="Keyboard and Mouse" name="Q">
+    humanReadableString: Q <size=80%>/</size> NUMPAD 8
+    humanReadableString_singleInput: Q
+  - binding:
+      m_Name: 
+      m_Id: fb8f0433-ea89-4c49-9ed7-a02765484fd0
+      m_Path: <Keyboard>/numpad8
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: Keyboard&Mouse
+      m_Action: RightUp
+      m_Flags: 0
+    isComposite: 0
+    isPartOfComposite: 0
+    tmproReferenceText: <style=Role/RightUp/2>
+    bindingName: Role/RightUp/2
+    inputStyleString: <sprite="Keyboard and Mouse" name="NUMPAD8">
+    inputStyleString_singleInput: <sprite="Keyboard and Mouse" name="NUMPAD8">
+    humanReadableString: NUMPAD 8
+    humanReadableString_singleInput: NUMPAD 8
+  - binding:
+      m_Name: 
+      m_Id: 187e0ec3-692a-4903-bd7a-c6aea0614a70
+      m_Path: <Keyboard>/e
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: Keyboard&Mouse
+      m_Action: RightDown
+      m_Flags: 0
+    isComposite: 0
+    isPartOfComposite: 0
+    tmproReferenceText: <style=Role/RightDown>
+    bindingName: Role/RightDown
+    inputStyleString: <sprite="Keyboard and Mouse" name="E"> <size=80%>/</size> <sprite="Keyboard
+      and Mouse" name="NUMPAD2">
+    inputStyleString_singleInput: <sprite="Keyboard and Mouse" name="E">
+    humanReadableString: E <size=80%>/</size> NUMPAD 2
+    humanReadableString_singleInput: E
+  - binding:
+      m_Name: 
+      m_Id: 360818cb-80dd-4d7f-a2c7-f86e31b5946d
+      m_Path: <Keyboard>/numpad2
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: Keyboard&Mouse
+      m_Action: RightDown
+      m_Flags: 0
+    isComposite: 0
+    isPartOfComposite: 0
+    tmproReferenceText: <style=Role/RightDown/2>
+    bindingName: Role/RightDown/2
+    inputStyleString: <sprite="Keyboard and Mouse" name="NUMPAD2">
+    inputStyleString_singleInput: <sprite="Keyboard and Mouse" name="NUMPAD2">
+    humanReadableString: NUMPAD 2
+    humanReadableString_singleInput: NUMPAD 2
+  - binding:
+      m_Name: 
+      m_Id: e42262c3-8274-4fb7-bdfa-441ca944e7d7
+      m_Path: <Keyboard>/enter
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: Keyboard&Mouse
+      m_Action: Submit
+      m_Flags: 0
+    isComposite: 0
+    isPartOfComposite: 0
+    tmproReferenceText: <style=Role/Submit>
+    bindingName: Role/Submit
+    inputStyleString: <sprite="Keyboard and Mouse" name="ENTER"> <size=80%>/</size>
+      <sprite="Keyboard and Mouse" name="SPACE"> <size=80%>/</size> <sprite="Keyboard
+      and Mouse" name="NUMPADENTER">
+    inputStyleString_singleInput: <sprite="Keyboard and Mouse" name="ENTER">
+    humanReadableString: ENTER <size=80%>/</size> SPACE <size=80%>/</size> NUMPAD
+      ENTER
+    humanReadableString_singleInput: ENTER
+  - binding:
+      m_Name: 
+      m_Id: d0f5c0ca-61e3-4d0e-938f-a30bb07ca774
+      m_Path: <Keyboard>/space
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: Keyboard&Mouse
+      m_Action: Submit
+      m_Flags: 0
+    isComposite: 0
+    isPartOfComposite: 0
+    tmproReferenceText: <style=Role/Submit/2>
+    bindingName: Role/Submit/2
+    inputStyleString: <sprite="Keyboard and Mouse" name="SPACE">
+    inputStyleString_singleInput: <sprite="Keyboard and Mouse" name="SPACE">
+    humanReadableString: SPACE
+    humanReadableString_singleInput: SPACE
+  - binding:
+      m_Name: 
+      m_Id: d1c89400-9338-448f-a99e-e272c5c7a065
+      m_Path: <Keyboard>/numpadEnter
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: Keyboard&Mouse
+      m_Action: Submit
+      m_Flags: 0
+    isComposite: 0
+    isPartOfComposite: 0
+    tmproReferenceText: <style=Role/Submit/3>
+    bindingName: Role/Submit/3
+    inputStyleString: <sprite="Keyboard and Mouse" name="NUMPADENTER">
+    inputStyleString_singleInput: <sprite="Keyboard and Mouse" name="NUMPADENTER">
+    humanReadableString: NUMPAD ENTER
+    humanReadableString_singleInput: NUMPAD ENTER
+  - binding:
+      m_Name: 
+      m_Id: 738c13ec-60e5-4848-a83c-b55a43bd6a41
+      m_Path: <Keyboard>/numpad0
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: Keyboard&Mouse
+      m_Action: Cancel
+      m_Flags: 0
+    isComposite: 0
+    isPartOfComposite: 0
+    tmproReferenceText: <style=Role/Cancel>
+    bindingName: Role/Cancel
+    inputStyleString: <sprite="Keyboard and Mouse" name="NUMPAD0">
+    inputStyleString_singleInput: <sprite="Keyboard and Mouse" name="NUMPAD0">
+    humanReadableString: NUMPAD 0
+    humanReadableString_singleInput: NUMPAD 0
+  - binding:
+      m_Name: 
+      m_Id: 4436ccc4-90bd-4884-a6ab-2be35aba4477
+      m_Path: <Keyboard>/j
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: Keyboard&Mouse
+      m_Action: ActionX
+      m_Flags: 0
+    isComposite: 0
+    isPartOfComposite: 0
+    tmproReferenceText: <style=Role/ActionX>
+    bindingName: Role/ActionX
+    inputStyleString: <sprite="Keyboard and Mouse" name="J"> <size=80%>/</size> <sprite="Keyboard
+      and Mouse" name="NUMPAD1">
+    inputStyleString_singleInput: <sprite="Keyboard and Mouse" name="J">
+    humanReadableString: J <size=80%>/</size> NUMPAD 1
+    humanReadableString_singleInput: J
+  - binding:
+      m_Name: 
+      m_Id: 9a94de2f-ad46-428d-bc4a-ed25ba00e2c2
+      m_Path: <Keyboard>/numpad1
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: Keyboard&Mouse
+      m_Action: ActionX
+      m_Flags: 0
+    isComposite: 0
+    isPartOfComposite: 0
+    tmproReferenceText: <style=Role/ActionX/2>
+    bindingName: Role/ActionX/2
+    inputStyleString: <sprite="Keyboard and Mouse" name="NUMPAD1">
+    inputStyleString_singleInput: <sprite="Keyboard and Mouse" name="NUMPAD1">
+    humanReadableString: NUMPAD 1
+    humanReadableString_singleInput: NUMPAD 1
+  - binding:
+      m_Name: 
+      m_Id: 53bbf2ce-5ca0-4859-a7a9-d81ea21821fa
+      m_Path: <Keyboard>/k
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: Keyboard&Mouse
+      m_Action: ActionY
+      m_Flags: 0
+    isComposite: 0
+    isPartOfComposite: 0
+    tmproReferenceText: <style=Role/ActionY>
+    bindingName: Role/ActionY
+    inputStyleString: <sprite="Keyboard and Mouse" name="K"> <size=80%>/</size> <sprite="Keyboard
+      and Mouse" name="NUMPAD3">
+    inputStyleString_singleInput: <sprite="Keyboard and Mouse" name="K">
+    humanReadableString: K <size=80%>/</size> NUMPAD 3
+    humanReadableString_singleInput: K
+  - binding:
+      m_Name: 
+      m_Id: ce7993dd-a45a-4d01-b1e3-f0005d06fd83
+      m_Path: <Keyboard>/numpad3
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: Keyboard&Mouse
+      m_Action: ActionY
+      m_Flags: 0
+    isComposite: 0
+    isPartOfComposite: 0
+    tmproReferenceText: <style=Role/ActionY/2>
+    bindingName: Role/ActionY/2
+    inputStyleString: <sprite="Keyboard and Mouse" name="NUMPAD3">
+    inputStyleString_singleInput: <sprite="Keyboard and Mouse" name="NUMPAD3">
+    humanReadableString: NUMPAD 3
+    humanReadableString_singleInput: NUMPAD 3
+  - binding:
+      m_Name: 
+      m_Id: 
+      m_Path: 
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: 
+      m_Flags: 0
+    isComposite: 1
+    isPartOfComposite: 0
+    tmproReferenceText: <style=UI/Navigate>
+    bindingName: UI/Navigate
+    inputStyleString: <sprite="Keyboard and Mouse" name="W"><sprite="Keyboard and
+      Mouse" name="UPARROW"><sprite="Keyboard and Mouse" name="S"><sprite="Keyboard
+      and Mouse" name="DOWNARROW"><sprite="Keyboard and Mouse" name="A"><sprite="Keyboard
+      and Mouse" name="LEFTARROW"><sprite="Keyboard and Mouse" name="D"><sprite="Keyboard
+      and Mouse" name="RIGHTARROW">
+    inputStyleString_singleInput: <sprite="Keyboard and Mouse" name="W"><sprite="Keyboard
+      and Mouse" name="UPARROW"><sprite="Keyboard and Mouse" name="S"><sprite="Keyboard
+      and Mouse" name="DOWNARROW"><sprite="Keyboard and Mouse" name="A"><sprite="Keyboard
+      and Mouse" name="LEFTARROW"><sprite="Keyboard and Mouse" name="D"><sprite="Keyboard
+      and Mouse" name="RIGHTARROW">
+    humanReadableString: W, UP ARROW, S, DOWN ARROW, A, LEFT ARROW, D, RIGHT ARROW
+    humanReadableString_singleInput: W, UP ARROW, S, DOWN ARROW, A, LEFT ARROW, D,
+      RIGHT ARROW
+  - binding:
+      m_Name: up
+      m_Id: 3e33887b-643b-434f-9ffc-ffadd08f8e88
+      m_Path: <Keyboard>/w
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: Keyboard&Mouse
+      m_Action: Navigate
+      m_Flags: 8
+    isComposite: 0
+    isPartOfComposite: 1
+    tmproReferenceText: <style=UI/Navigate/up>
+    bindingName: UI/Navigate/up
+    inputStyleString: <sprite="Keyboard and Mouse" name="W"> <size=80%>/</size> <sprite="Keyboard
+      and Mouse" name="UPARROW">
+    inputStyleString_singleInput: <sprite="Keyboard and Mouse" name="W">
+    humanReadableString: W <size=80%>/</size> UP ARROW
+    humanReadableString_singleInput: W
+  - binding:
+      m_Name: down
+      m_Id: f7888bb7-dee7-4d29-a6c7-f8f6a228db18
+      m_Path: <Keyboard>/s
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: Keyboard&Mouse
+      m_Action: Navigate
+      m_Flags: 8
+    isComposite: 0
+    isPartOfComposite: 1
+    tmproReferenceText: <style=UI/Navigate/down>
+    bindingName: UI/Navigate/down
+    inputStyleString: <sprite="Keyboard and Mouse" name="S"> <size=80%>/</size> <sprite="Keyboard
+      and Mouse" name="DOWNARROW">
+    inputStyleString_singleInput: <sprite="Keyboard and Mouse" name="S">
+    humanReadableString: S <size=80%>/</size> DOWN ARROW
+    humanReadableString_singleInput: S
+  - binding:
+      m_Name: left
+      m_Id: 97bf082f-f97d-437e-b88c-1010dde890b6
+      m_Path: <Keyboard>/a
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: Keyboard&Mouse
+      m_Action: Navigate
+      m_Flags: 8
+    isComposite: 0
+    isPartOfComposite: 1
+    tmproReferenceText: <style=UI/Navigate/left>
+    bindingName: UI/Navigate/left
+    inputStyleString: <sprite="Keyboard and Mouse" name="A"> <size=80%>/</size> <sprite="Keyboard
+      and Mouse" name="LEFTARROW">
+    inputStyleString_singleInput: <sprite="Keyboard and Mouse" name="A">
+    humanReadableString: A <size=80%>/</size> LEFT ARROW
+    humanReadableString_singleInput: A
+  - binding:
+      m_Name: right
+      m_Id: ca2ad5f5-c32c-4bda-aa2e-f66309203d23
+      m_Path: <Keyboard>/d
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: Keyboard&Mouse
+      m_Action: Navigate
+      m_Flags: 8
+    isComposite: 0
+    isPartOfComposite: 1
+    tmproReferenceText: <style=UI/Navigate/right>
+    bindingName: UI/Navigate/right
+    inputStyleString: <sprite="Keyboard and Mouse" name="D"> <size=80%>/</size> <sprite="Keyboard
+      and Mouse" name="RIGHTARROW">
+    inputStyleString_singleInput: <sprite="Keyboard and Mouse" name="D">
+    humanReadableString: D <size=80%>/</size> RIGHT ARROW
+    humanReadableString_singleInput: D
+  - binding:
+      m_Name: 
+      m_Id: 541088ae-4764-452c-9be9-335a70e72c06
+      m_Path: <Keyboard>/enter
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: Keyboard&Mouse
+      m_Action: Submit
+      m_Flags: 0
+    isComposite: 0
+    isPartOfComposite: 0
+    tmproReferenceText: <style=UI/Submit>
+    bindingName: UI/Submit
+    inputStyleString: <sprite="Keyboard and Mouse" name="ENTER"> <size=80%>/</size>
+      <sprite="Keyboard and Mouse" name="SPACE"> <size=80%>/</size> <sprite="Keyboard
+      and Mouse" name="NUMPADENTER">
+    inputStyleString_singleInput: <sprite="Keyboard and Mouse" name="ENTER">
+    humanReadableString: ENTER <size=80%>/</size> SPACE <size=80%>/</size> NUMPAD
+      ENTER
+    humanReadableString_singleInput: ENTER
+  - binding:
+      m_Name: 
+      m_Id: 70c46a61-4e3d-4823-ae4c-08a4a21ccb55
+      m_Path: <Keyboard>/space
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: Keyboard&Mouse
+      m_Action: Submit
+      m_Flags: 0
+    isComposite: 0
+    isPartOfComposite: 0
+    tmproReferenceText: <style=UI/Submit/2>
+    bindingName: UI/Submit/2
+    inputStyleString: <sprite="Keyboard and Mouse" name="SPACE">
+    inputStyleString_singleInput: <sprite="Keyboard and Mouse" name="SPACE">
+    humanReadableString: SPACE
+    humanReadableString_singleInput: SPACE
+  - binding:
+      m_Name: 
+      m_Id: 4e3184a6-59b1-4135-88fb-fe97c04f0219
+      m_Path: <Keyboard>/numpadEnter
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: Keyboard&Mouse
+      m_Action: Submit
+      m_Flags: 0
+    isComposite: 0
+    isPartOfComposite: 0
+    tmproReferenceText: <style=UI/Submit/3>
+    bindingName: UI/Submit/3
+    inputStyleString: <sprite="Keyboard and Mouse" name="NUMPADENTER">
+    inputStyleString_singleInput: <sprite="Keyboard and Mouse" name="NUMPADENTER">
+    humanReadableString: NUMPAD ENTER
+    humanReadableString_singleInput: NUMPAD ENTER
+  - binding:
+      m_Name: 
+      m_Id: 80be0289-f7cc-4eb4-90d8-8d6f39c6c2fa
+      m_Path: <Mouse>/position
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: Keyboard&Mouse
+      m_Action: Point
+      m_Flags: 0
+    isComposite: 0
+    isPartOfComposite: 0
+    tmproReferenceText: <style=UI/Point>
+    bindingName: UI/Point
+    inputStyleString: <sprite="Keyboard and Mouse" name="POSITION"> <size=80%>/</size>
+      <sprite="Keyboard and Mouse" name="POSITION">
+    inputStyleString_singleInput: <sprite="Keyboard and Mouse" name="POSITION">
+    humanReadableString: MOUSE <size=80%>/</size> MOUSE
+    humanReadableString_singleInput: MOUSE
+  - binding:
+      m_Name: 
+      m_Id: 7acff2e7-7b96-471f-afa3-26796b673400
+      m_Path: <Pen>/position
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: Keyboard&Mouse
+      m_Action: Point
+      m_Flags: 0
+    isComposite: 0
+    isPartOfComposite: 0
+    tmproReferenceText: <style=UI/Point/2>
+    bindingName: UI/Point/2
+    inputStyleString: <sprite="Keyboard and Mouse" name="POSITION">
+    inputStyleString_singleInput: <sprite="Keyboard and Mouse" name="POSITION">
+    humanReadableString: MOUSE
+    humanReadableString_singleInput: MOUSE
+  - binding:
+      m_Name: 
+      m_Id: be54803f-17ab-4dc3-a7f0-52e2afe62a8d
+      m_Path: <Mouse>/leftButton
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: ;Keyboard&Mouse
+      m_Action: Click
+      m_Flags: 0
+    isComposite: 0
+    isPartOfComposite: 0
+    tmproReferenceText: <style=UI/Click>
+    bindingName: UI/Click
+    inputStyleString: <sprite="Keyboard and Mouse" name="LEFTBUTTON"> <size=80%>/</size>
+      <sprite="Keyboard and Mouse" name="FALLBACKSPRITE">
+    inputStyleString_singleInput: <sprite="Keyboard and Mouse" name="LEFTBUTTON">
+    humanReadableString: LMB <size=80%>/</size> TIP
+    humanReadableString_singleInput: LMB
+  - binding:
+      m_Name: 
+      m_Id: 21bef730-c50f-4a3c-9672-446a64e67113
+      m_Path: <Pen>/tip
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: ;Keyboard&Mouse
+      m_Action: Click
+      m_Flags: 0
+    isComposite: 0
+    isPartOfComposite: 0
+    tmproReferenceText: <style=UI/Click/2>
+    bindingName: UI/Click/2
+    inputStyleString: <sprite="Keyboard and Mouse" name="FALLBACKSPRITE">
+    inputStyleString_singleInput: <sprite="Keyboard and Mouse" name="FALLBACKSPRITE">
+    humanReadableString: TIP
+    humanReadableString_singleInput: TIP
+  - binding:
+      m_Name: 
+      m_Id: 60634bd4-3d6b-4235-a6de-c79251564947
+      m_Path: <Mouse>/scroll
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: ;Keyboard&Mouse
+      m_Action: ScrollWheel
+      m_Flags: 0
+    isComposite: 0
+    isPartOfComposite: 0
+    tmproReferenceText: <style=UI/ScrollWheel>
+    bindingName: UI/ScrollWheel
+    inputStyleString: <sprite="Keyboard and Mouse" name="SCROLL">
+    inputStyleString_singleInput: <sprite="Keyboard and Mouse" name="SCROLL">
+    humanReadableString: SCROLL
+    humanReadableString_singleInput: SCROLL
+  - binding:
+      m_Name: 
+      m_Id: 1eb4ccbc-45e8-451b-96d0-29fa8c75c2af
+      m_Path: <Mouse>/middleButton
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: ;Keyboard&Mouse
+      m_Action: MiddleClick
+      m_Flags: 0
+    isComposite: 0
+    isPartOfComposite: 0
+    tmproReferenceText: <style=UI/MiddleClick>
+    bindingName: UI/MiddleClick
+    inputStyleString: <sprite="Keyboard and Mouse" name="MIDDLEBUTTON">
+    inputStyleString_singleInput: <sprite="Keyboard and Mouse" name="MIDDLEBUTTON">
+    humanReadableString: MMB
+    humanReadableString_singleInput: MMB
+  - binding:
+      m_Name: 
+      m_Id: 7d646d7f-179d-4d0b-aec9-b487f74d5326
+      m_Path: <Mouse>/rightButton
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: ;Keyboard&Mouse
+      m_Action: RightClick
+      m_Flags: 0
+    isComposite: 0
+    isPartOfComposite: 0
+    tmproReferenceText: <style=UI/RightClick>
+    bindingName: UI/RightClick
+    inputStyleString: <sprite="Keyboard and Mouse" name="RIGHTBUTTON">
+    inputStyleString_singleInput: <sprite="Keyboard and Mouse" name="RIGHTBUTTON">
+    humanReadableString: RMB
+    humanReadableString_singleInput: RMB
+  - binding:
+      m_Name: 
+      m_Id: c0dbe64f-830d-45ee-9286-2fe5ff6bd7c5
+      m_Path: <Keyboard>/enter
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: Keyboard&Mouse
+      m_Action: Submit
+      m_Flags: 0
+    isComposite: 0
+    isPartOfComposite: 0
+    tmproReferenceText: <style=Common/Submit>
+    bindingName: Common/Submit
+    inputStyleString: <sprite="Keyboard and Mouse" name="ENTER"> <size=80%>/</size>
+      <sprite="Keyboard and Mouse" name="NUMPADENTER"> <size=80%>/</size> <sprite="Keyboard
+      and Mouse" name="SPACE">
+    inputStyleString_singleInput: <sprite="Keyboard and Mouse" name="ENTER">
+    humanReadableString: ENTER <size=80%>/</size> NUMPAD ENTER <size=80%>/</size>
+      SPACE
+    humanReadableString_singleInput: ENTER
+  - binding:
+      m_Name: 
+      m_Id: d1447de3-cf5f-473d-a8c0-587022ce56fa
+      m_Path: <Keyboard>/numpadEnter
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: Keyboard&Mouse
+      m_Action: Submit
+      m_Flags: 0
+    isComposite: 0
+    isPartOfComposite: 0
+    tmproReferenceText: <style=Common/Submit/2>
+    bindingName: Common/Submit/2
+    inputStyleString: <sprite="Keyboard and Mouse" name="NUMPADENTER">
+    inputStyleString_singleInput: <sprite="Keyboard and Mouse" name="NUMPADENTER">
+    humanReadableString: NUMPAD ENTER
+    humanReadableString_singleInput: NUMPAD ENTER
+  - binding:
+      m_Name: 
+      m_Id: 75e33145-ca53-49a3-b4db-90ae52019b85
+      m_Path: <Keyboard>/space
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: Keyboard&Mouse
+      m_Action: Submit
+      m_Flags: 0
+    isComposite: 0
+    isPartOfComposite: 0
+    tmproReferenceText: <style=Common/Submit/3>
+    bindingName: Common/Submit/3
+    inputStyleString: <sprite="Keyboard and Mouse" name="SPACE">
+    inputStyleString_singleInput: <sprite="Keyboard and Mouse" name="SPACE">
+    humanReadableString: SPACE
+    humanReadableString_singleInput: SPACE
+  - binding:
+      m_Name: 
+      m_Id: 7f576888-7e2b-4c05-90e1-61a5ab09925f
+      m_Path: <Keyboard>/escape
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: Keyboard&Mouse
+      m_Action: Cancel
+      m_Flags: 0
+    isComposite: 0
+    isPartOfComposite: 0
+    tmproReferenceText: <style=Common/Cancel>
+    bindingName: Common/Cancel
+    inputStyleString: <sprite="Keyboard and Mouse" name="ESCAPE"> <size=80%>/</size>
+      <sprite="Keyboard and Mouse" name="NUMPAD0">
+    inputStyleString_singleInput: <sprite="Keyboard and Mouse" name="ESCAPE">
+    humanReadableString: ESCAPE <size=80%>/</size> NUMPAD 0
+    humanReadableString_singleInput: ESCAPE
+  - binding:
+      m_Name: 
+      m_Id: cd5d3f61-ff00-44af-a86d-90f2eac47e95
+      m_Path: <Keyboard>/numpad0
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: Keyboard&Mouse
+      m_Action: Cancel
+      m_Flags: 0
+    isComposite: 0
+    isPartOfComposite: 0
+    tmproReferenceText: <style=Common/Cancel/2>
+    bindingName: Common/Cancel/2
+    inputStyleString: <sprite="Keyboard and Mouse" name="NUMPAD0">
+    inputStyleString_singleInput: <sprite="Keyboard and Mouse" name="NUMPAD0">
+    humanReadableString: NUMPAD 0
+    humanReadableString_singleInput: NUMPAD 0
+  - binding:
+      m_Name: 
+      m_Id: e7f2cd4e-79e3-44c2-89c7-7c1941dfd7f5
+      m_Path: <Keyboard>/j
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: Keyboard&Mouse
+      m_Action: ActionX
+      m_Flags: 0
+    isComposite: 0
+    isPartOfComposite: 0
+    tmproReferenceText: <style=Common/ActionX>
+    bindingName: Common/ActionX
+    inputStyleString: <sprite="Keyboard and Mouse" name="J"> <size=80%>/</size> <sprite="Keyboard
+      and Mouse" name="NUMPAD1">
+    inputStyleString_singleInput: <sprite="Keyboard and Mouse" name="J">
+    humanReadableString: J <size=80%>/</size> NUMPAD 1
+    humanReadableString_singleInput: J
+  - binding:
+      m_Name: 
+      m_Id: b81b86a1-cc4b-4231-b166-3cb7a672d99f
+      m_Path: <Keyboard>/numpad1
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: Keyboard&Mouse
+      m_Action: ActionX
+      m_Flags: 0
+    isComposite: 0
+    isPartOfComposite: 0
+    tmproReferenceText: <style=Common/ActionX/2>
+    bindingName: Common/ActionX/2
+    inputStyleString: <sprite="Keyboard and Mouse" name="NUMPAD1">
+    inputStyleString_singleInput: <sprite="Keyboard and Mouse" name="NUMPAD1">
+    humanReadableString: NUMPAD 1
+    humanReadableString_singleInput: NUMPAD 1
+  - binding:
+      m_Name: 
+      m_Id: 4a09d143-1c4a-4617-bf3d-dc06e643dab9
+      m_Path: <Keyboard>/f
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: Keyboard&Mouse
+      m_Action: ActionY
+      m_Flags: 0
+    isComposite: 0
+    isPartOfComposite: 0
+    tmproReferenceText: <style=Common/ActionY>
+    bindingName: Common/ActionY
+    inputStyleString: <sprite="Keyboard and Mouse" name="F"> <size=80%>/</size> <sprite="Keyboard
+      and Mouse" name="NUMPAD3">
+    inputStyleString_singleInput: <sprite="Keyboard and Mouse" name="F">
+    humanReadableString: F <size=80%>/</size> NUMPAD 3
+    humanReadableString_singleInput: F
+  - binding:
+      m_Name: 
+      m_Id: 06d5c51b-e610-45b1-b2c9-9b6916bc2ecd
+      m_Path: <Keyboard>/numpad3
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: Keyboard&Mouse
+      m_Action: ActionY
+      m_Flags: 0
+    isComposite: 0
+    isPartOfComposite: 0
+    tmproReferenceText: <style=Common/ActionY/2>
+    bindingName: Common/ActionY/2
+    inputStyleString: <sprite="Keyboard and Mouse" name="NUMPAD3">
+    inputStyleString_singleInput: <sprite="Keyboard and Mouse" name="NUMPAD3">
+    humanReadableString: NUMPAD 3
+    humanReadableString_singleInput: NUMPAD 3
+  - binding:
+      m_Name: 
+      m_Id: 6cac70de-94d4-4233-8145-f5019dbdb885
+      m_Path: <Keyboard>/g
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: Keyboard&Mouse
+      m_Action: Start
+      m_Flags: 0
+    isComposite: 0
+    isPartOfComposite: 0
+    tmproReferenceText: <style=Common/Start>
+    bindingName: Common/Start
+    inputStyleString: <sprite="Keyboard and Mouse" name="G">
+    inputStyleString_singleInput: <sprite="Keyboard and Mouse" name="G">
+    humanReadableString: G
+    humanReadableString_singleInput: G
+  - binding:
+      m_Name: 
+      m_Id: 5ea7390f-4e4e-40fc-9943-ba8352c801ff
+      m_Path: <Pointer>/press
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: Touch;Keyboard&Mouse
+      m_Action: Pointer
+      m_Flags: 0
+    isComposite: 0
+    isPartOfComposite: 0
+    tmproReferenceText: <style=Common/Pointer>
+    bindingName: Common/Pointer
+    inputStyleString: <sprite="Keyboard and Mouse" name="FALLBACKSPRITE">
+    inputStyleString_singleInput: <sprite="Keyboard and Mouse" name="FALLBACKSPRITE">
+    humanReadableString: PRESS
+    humanReadableString_singleInput: PRESS
+  - binding:
+      m_Name: 
+      m_Id: eeb95a15-f4c4-4db3-b99f-ed7a94d71954
+      m_Path: <Mouse>/position
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: Keyboard&Mouse
+      m_Action: Point
+      m_Flags: 0
+    isComposite: 0
+    isPartOfComposite: 0
+    tmproReferenceText: <style=Common/Point>
+    bindingName: Common/Point
+    inputStyleString: <sprite="Keyboard and Mouse" name="POSITION">
+    inputStyleString_singleInput: <sprite="Keyboard and Mouse" name="POSITION">
+    humanReadableString: MOUSE
+    humanReadableString_singleInput: MOUSE
+  inputStyleGamepadDataList:
+  - binding:
+      m_Name: 
+      m_Id: 978bfe49-cc26-4a3d-ab7b-7d7a29327403
+      m_Path: <Gamepad>/leftStick
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: ;Gamepad
+      m_Action: Move
+      m_Flags: 0
+    isComposite: 0
+    isPartOfComposite: 0
+    tmproReferenceText: <style=Role/Move>
+    bindingName: Role/Move
+    inputStyleString: <sprite="XBox" name="LEFT STICK"> <size=80%>/</size> <sprite="XBox"
+      name="D-PAD">
+    inputStyleString_singleInput: <sprite="XBox" name="LEFT STICK">
+    humanReadableString: LEFT STICK <size=80%>/</size> D-PAD
+    humanReadableString_singleInput: LEFT STICK
+  - binding:
+      m_Name: 
+      m_Id: 8693b548-4314-47e0-9ce0-5c565a2addf3
+      m_Path: <Gamepad>/dpad
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: Gamepad
+      m_Action: Move
+      m_Flags: 0
+    isComposite: 0
+    isPartOfComposite: 0
+    tmproReferenceText: <style=Role/Move/2>
+    bindingName: Role/Move/2
+    inputStyleString: <sprite="XBox" name="D-PAD">
+    inputStyleString_singleInput: <sprite="XBox" name="D-PAD">
+    humanReadableString: D-PAD
+    humanReadableString_singleInput: D-PAD
+  - binding:
+      m_Name: 
+      m_Id: 94c992f7-ac1b-49fa-8f54-443a57a7661a
+      m_Path: <Gamepad>/rightStick/up
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: Gamepad
+      m_Action: RightUp
+      m_Flags: 0
+    isComposite: 0
+    isPartOfComposite: 0
+    tmproReferenceText: <style=Role/RightUp>
+    bindingName: Role/RightUp
+    inputStyleString: <sprite="XBox" name="RIGHT STICK/UP">
+    inputStyleString_singleInput: <sprite="XBox" name="RIGHT STICK/UP">
+    humanReadableString: RIGHT STICK/UP
+    humanReadableString_singleInput: RIGHT STICK/UP
+  - binding:
+      m_Name: 
+      m_Id: 802076b1-bda9-48f9-9bc9-93f26b31f4bf
+      m_Path: <Gamepad>/rightStick/down
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: Gamepad
+      m_Action: RightDown
+      m_Flags: 0
+    isComposite: 0
+    isPartOfComposite: 0
+    tmproReferenceText: <style=Role/RightDown>
+    bindingName: Role/RightDown
+    inputStyleString: <sprite="XBox" name="RIGHT STICK/DOWN">
+    inputStyleString_singleInput: <sprite="XBox" name="RIGHT STICK/DOWN">
+    humanReadableString: RIGHT STICK/DOWN
+    humanReadableString_singleInput: RIGHT STICK/DOWN
+  - binding:
+      m_Name: 
+      m_Id: f2ef79c9-a446-4e6d-bfea-2cd691284abd
+      m_Path: <Gamepad>/buttonSouth
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: Gamepad
+      m_Action: Submit
+      m_Flags: 0
+    isComposite: 0
+    isPartOfComposite: 0
+    tmproReferenceText: <style=Role/Submit>
+    bindingName: Role/Submit
+    inputStyleString: <sprite="XBox" name="BUTTON SOUTH">
+    inputStyleString_singleInput: <sprite="XBox" name="BUTTON SOUTH">
+    humanReadableString: BUTTON SOUTH
+    humanReadableString_singleInput: BUTTON SOUTH
+  - binding:
+      m_Name: 
+      m_Id: 385c36f5-f48f-4d74-980c-2d53a6e28c8b
+      m_Path: <Gamepad>/buttonEast
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: Gamepad
+      m_Action: Cancel
+      m_Flags: 0
+    isComposite: 0
+    isPartOfComposite: 0
+    tmproReferenceText: <style=Role/Cancel>
+    bindingName: Role/Cancel
+    inputStyleString: <sprite="XBox" name="BUTTON EAST">
+    inputStyleString_singleInput: <sprite="XBox" name="BUTTON EAST">
+    humanReadableString: BUTTON EAST
+    humanReadableString_singleInput: BUTTON EAST
+  - binding:
+      m_Name: 
+      m_Id: 1c766bb3-e970-4e2d-97db-2db3dd5719fe
+      m_Path: <Gamepad>/buttonWest
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: Gamepad
+      m_Action: ActionX
+      m_Flags: 0
+    isComposite: 0
+    isPartOfComposite: 0
+    tmproReferenceText: <style=Role/ActionX>
+    bindingName: Role/ActionX
+    inputStyleString: <sprite="XBox" name="BUTTON WEST">
+    inputStyleString_singleInput: <sprite="XBox" name="BUTTON WEST">
+    humanReadableString: BUTTON WEST
+    humanReadableString_singleInput: BUTTON WEST
+  - binding:
+      m_Name: 
+      m_Id: 83036a32-55da-4268-8461-ddb8ccad4194
+      m_Path: <Gamepad>/buttonNorth
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: Gamepad
+      m_Action: ActionY
+      m_Flags: 0
+    isComposite: 0
+    isPartOfComposite: 0
+    tmproReferenceText: <style=Role/ActionY>
+    bindingName: Role/ActionY
+    inputStyleString: <sprite="XBox" name="BUTTON NORTH">
+    inputStyleString_singleInput: <sprite="XBox" name="BUTTON NORTH">
+    humanReadableString: BUTTON NORTH
+    humanReadableString_singleInput: BUTTON NORTH
+  - binding:
+      m_Name: 
+      m_Id: 
+      m_Path: 
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: 
+      m_Flags: 0
+    isComposite: 1
+    isPartOfComposite: 0
+    tmproReferenceText: <style=UI/Navigate>
+    bindingName: UI/Navigate
+    inputStyleString: <sprite="XBox" name="LEFT STICK/UP"><sprite="XBox" name="RIGHT
+      STICK/UP"><sprite="XBox" name="LEFT STICK/DOWN"><sprite="XBox" name="RIGHT
+      STICK/DOWN"><sprite="XBox" name="LEFT STICK/LEFT"><sprite="XBox" name="RIGHT
+      STICK/LEFT"><sprite="XBox" name="LEFT STICK/RIGHT"><sprite="XBox" name="RIGHT
+      STICK/RIGHT"> <size=80%>/</size> <sprite="XBox" name="D-PAD">
+    inputStyleString_singleInput: <sprite="XBox" name="LEFT STICK/UP"><sprite="XBox"
+      name="RIGHT STICK/UP"><sprite="XBox" name="LEFT STICK/DOWN"><sprite="XBox"
+      name="RIGHT STICK/DOWN"><sprite="XBox" name="LEFT STICK/LEFT"><sprite="XBox"
+      name="RIGHT STICK/LEFT"><sprite="XBox" name="LEFT STICK/RIGHT"><sprite="XBox"
+      name="RIGHT STICK/RIGHT">
+    humanReadableString: LEFT STICK/UP, RIGHT STICK/UP, LEFT STICK/DOWN, RIGHT STICK/DOWN,
+      LEFT STICK/LEFT, RIGHT STICK/LEFT, LEFT STICK/RIGHT, RIGHT STICK/RIGHT <size=80%>/</size>
+      D-PAD
+    humanReadableString_singleInput: LEFT STICK/UP, RIGHT STICK/UP, LEFT STICK/DOWN,
+      RIGHT STICK/DOWN, LEFT STICK/LEFT, RIGHT STICK/LEFT, LEFT STICK/RIGHT, RIGHT
+      STICK/RIGHT
+  - binding:
+      m_Name: up
+      m_Id: df3c6abd-1684-425c-8597-c543bb50e0e8
+      m_Path: <Gamepad>/leftStick/up
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: ;Gamepad
+      m_Action: Navigate
+      m_Flags: 8
+    isComposite: 0
+    isPartOfComposite: 1
+    tmproReferenceText: <style=UI/Navigate/up>
+    bindingName: UI/Navigate/up
+    inputStyleString: <sprite="XBox" name="LEFT STICK/UP"> <size=80%>/</size> <sprite="XBox"
+      name="RIGHT STICK/UP">
+    inputStyleString_singleInput: <sprite="XBox" name="LEFT STICK/UP">
+    humanReadableString: LEFT STICK/UP <size=80%>/</size> RIGHT STICK/UP
+    humanReadableString_singleInput: LEFT STICK/UP
+  - binding:
+      m_Name: down
+      m_Id: 73bbcc55-5538-4647-a59c-4e891e23a2ef
+      m_Path: <Gamepad>/leftStick/down
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: ;Gamepad
+      m_Action: Navigate
+      m_Flags: 8
+    isComposite: 0
+    isPartOfComposite: 1
+    tmproReferenceText: <style=UI/Navigate/down>
+    bindingName: UI/Navigate/down
+    inputStyleString: <sprite="XBox" name="LEFT STICK/DOWN"> <size=80%>/</size> <sprite="XBox"
+      name="RIGHT STICK/DOWN">
+    inputStyleString_singleInput: <sprite="XBox" name="LEFT STICK/DOWN">
+    humanReadableString: LEFT STICK/DOWN <size=80%>/</size> RIGHT STICK/DOWN
+    humanReadableString_singleInput: LEFT STICK/DOWN
+  - binding:
+      m_Name: left
+      m_Id: 14b305c9-3b95-476b-a40d-d2c28830a4af
+      m_Path: <Gamepad>/leftStick/left
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: ;Gamepad
+      m_Action: Navigate
+      m_Flags: 8
+    isComposite: 0
+    isPartOfComposite: 1
+    tmproReferenceText: <style=UI/Navigate/left>
+    bindingName: UI/Navigate/left
+    inputStyleString: <sprite="XBox" name="LEFT STICK/LEFT"> <size=80%>/</size> <sprite="XBox"
+      name="RIGHT STICK/LEFT">
+    inputStyleString_singleInput: <sprite="XBox" name="LEFT STICK/LEFT">
+    humanReadableString: LEFT STICK/LEFT <size=80%>/</size> RIGHT STICK/LEFT
+    humanReadableString_singleInput: LEFT STICK/LEFT
+  - binding:
+      m_Name: right
+      m_Id: 5d4fe993-82dc-4928-8751-008b9bbdd05f
+      m_Path: <Gamepad>/leftStick/right
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: ;Gamepad
+      m_Action: Navigate
+      m_Flags: 8
+    isComposite: 0
+    isPartOfComposite: 1
+    tmproReferenceText: <style=UI/Navigate/right>
+    bindingName: UI/Navigate/right
+    inputStyleString: <sprite="XBox" name="LEFT STICK/RIGHT"> <size=80%>/</size>
+      <sprite="XBox" name="RIGHT STICK/RIGHT">
+    inputStyleString_singleInput: <sprite="XBox" name="LEFT STICK/RIGHT">
+    humanReadableString: LEFT STICK/RIGHT <size=80%>/</size> RIGHT STICK/RIGHT
+    humanReadableString_singleInput: LEFT STICK/RIGHT
+  - binding:
+      m_Name: 
+      m_Id: 92df0d3c-8678-42af-8a21-901853a577b7
+      m_Path: <Gamepad>/buttonSouth
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: Gamepad
+      m_Action: Submit
+      m_Flags: 0
+    isComposite: 0
+    isPartOfComposite: 0
+    tmproReferenceText: <style=UI/Submit>
+    bindingName: UI/Submit
+    inputStyleString: <sprite="XBox" name="BUTTON SOUTH">
+    inputStyleString_singleInput: <sprite="XBox" name="BUTTON SOUTH">
+    humanReadableString: BUTTON SOUTH
+    humanReadableString_singleInput: BUTTON SOUTH
+  - binding:
+      m_Name: 
+      m_Id: 1b30d4d4-e627-466d-ad74-70a1b53fb65b
+      m_Path: <Gamepad>/buttonSouth
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: Gamepad
+      m_Action: Submit
+      m_Flags: 0
+    isComposite: 0
+    isPartOfComposite: 0
+    tmproReferenceText: <style=Common/Submit>
+    bindingName: Common/Submit
+    inputStyleString: <sprite="XBox" name="BUTTON SOUTH">
+    inputStyleString_singleInput: <sprite="XBox" name="BUTTON SOUTH">
+    humanReadableString: BUTTON SOUTH
+    humanReadableString_singleInput: BUTTON SOUTH
+  - binding:
+      m_Name: 
+      m_Id: d8514fa9-534e-49d2-a84a-82682c3dc691
+      m_Path: <Gamepad>/buttonEast
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: Gamepad
+      m_Action: Cancel
+      m_Flags: 0
+    isComposite: 0
+    isPartOfComposite: 0
+    tmproReferenceText: <style=Common/Cancel>
+    bindingName: Common/Cancel
+    inputStyleString: <sprite="XBox" name="BUTTON EAST">
+    inputStyleString_singleInput: <sprite="XBox" name="BUTTON EAST">
+    humanReadableString: BUTTON EAST
+    humanReadableString_singleInput: BUTTON EAST
+  - binding:
+      m_Name: 
+      m_Id: cb5c2bd7-b6d7-44d7-bb76-afa65d56484a
+      m_Path: <Gamepad>/buttonWest
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: Gamepad
+      m_Action: ActionX
+      m_Flags: 0
+    isComposite: 0
+    isPartOfComposite: 0
+    tmproReferenceText: <style=Common/ActionX>
+    bindingName: Common/ActionX
+    inputStyleString: <sprite="XBox" name="BUTTON WEST">
+    inputStyleString_singleInput: <sprite="XBox" name="BUTTON WEST">
+    humanReadableString: BUTTON WEST
+    humanReadableString_singleInput: BUTTON WEST
+  - binding:
+      m_Name: 
+      m_Id: 15eb8cfc-4d45-4bd0-8c63-877ef766b4eb
+      m_Path: <Gamepad>/buttonNorth
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: Gamepad
+      m_Action: ActionY
+      m_Flags: 0
+    isComposite: 0
+    isPartOfComposite: 0
+    tmproReferenceText: <style=Common/ActionY>
+    bindingName: Common/ActionY
+    inputStyleString: <sprite="XBox" name="BUTTON NORTH">
+    inputStyleString_singleInput: <sprite="XBox" name="BUTTON NORTH">
+    humanReadableString: BUTTON NORTH
+    humanReadableString_singleInput: BUTTON NORTH
+  - binding:
+      m_Name: 
+      m_Id: 8f98edab-78ab-4439-9070-37ba514a8ebd
+      m_Path: <Gamepad>/start
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: Gamepad
+      m_Action: Start
+      m_Flags: 0
+    isComposite: 0
+    isPartOfComposite: 0
+    tmproReferenceText: <style=Common/Start>
+    bindingName: Common/Start
+    inputStyleString: <sprite="XBox" name="START">
+    inputStyleString_singleInput: <sprite="XBox" name="START">
+    humanReadableString: START
+    humanReadableString_singleInput: START
+  TEXTMESHPRO_SPRITEASSET_FOLDERPATH: Assets/TextMesh Pro/Resources/Sprite Assets/

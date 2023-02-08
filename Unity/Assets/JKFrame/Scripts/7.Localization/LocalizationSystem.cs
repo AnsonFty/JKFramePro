@@ -17,33 +17,11 @@ namespace JKFrame
     /// </summary>
     public static class LocalizationSystem
     {
-        public static main.Table Table;
         private static int LanguageIndexCount;
 
-        public static void LoadAllTable()
+        public static void Init()
         {
             LanguageIndexCount = Enum.GetNames(CurrentLanguageType.GetType()).Length - 1;
-            using (var stream = new FileStream($"{Application.dataPath}/JKFrame/Table/table_gen.bin", FileMode.Open))
-            {
-                stream.Position = 0;
-
-                var reader = new tabtoy.TableReader(stream);
-
-                Table = new main.Table();
-
-                try
-                {
-                    Table.Deserialize(reader);
-                }
-                catch (Exception e)
-                {
-                    Debug.LogException(e);
-                    throw;
-                }
-
-                // 建立所有数据的索引
-                Table.IndexData();
-            }
         }
 
         private static LanguageType m_CurrentLanguageType;
@@ -64,9 +42,9 @@ namespace JKFrame
             switch (m_CurrentLanguageType)
             {
                 case LanguageType.SimplifiedChinese:
-                    return Table.LanguageByID[bagName].SimplifiedChinese;
+                    return TableSystem.Table.LanguageByID[bagName].SimplifiedChinese;
                 case LanguageType.English:
-                    return Table.LanguageByID[bagName].English;
+                    return TableSystem.Table.LanguageByID[bagName].English;
             }
             return string.Empty;
         }
@@ -75,10 +53,10 @@ namespace JKFrame
         {
             if (isActive)
             {
-                InputManager.Instance.AddListenerLeftStickLeftRight(LastLanguage, NextLanguage);
+                JKInputSystem.AddListenerLeftStickLeftRight(LastLanguage, NextLanguage);
                 return;
             }
-            InputManager.Instance.RemoveLeftStickLeftRight();
+            JKInputSystem.RemoveLeftStickLeftRight();
         }
 
         public static void LastLanguage()

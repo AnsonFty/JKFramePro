@@ -5,7 +5,7 @@ using UnityEditor;
 public static class EditorTool
 {
     /// <summary>
-    /// Ôö¼ÓÔ¤´¦ÀíÖ¸Áî
+    /// å¢åŠ é¢„å¤„ç†æŒ‡ä»¤
     /// </summary>
     public static void AddScriptCompilationSymbol(string name)
     {
@@ -18,7 +18,7 @@ public static class EditorTool
     }
 
     /// <summary>
-    /// ÒÆ³ıÔ¤´¦ÀíÖ¸Áî
+    /// ç§»é™¤é¢„å¤„ç†æŒ‡ä»¤
     /// </summary>
     public static void RemoveScriptCompilationSymbol(string name)
     {

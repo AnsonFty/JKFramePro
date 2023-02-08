@@ -23,19 +23,19 @@ MonoBehaviour:
     SerializationNodes:
     - Name: LogConfig
       Entry: 7
-      Data: 0|JKFrame.JKFrameSetting+LogSetting, Assembly-CSharp
+      Data: 0|JKFrame.JKFrameSetting+LogSetting, JKFrame
     - Name: enableLog
       Entry: 5
       Data: true
     - Name: writeTime
       Entry: 5
-      Data: false
+      Data: true
     - Name: writeThreadID
       Entry: 5
       Data: false
     - Name: writeTrace
       Entry: 5
-      Data: false
+      Data: true
     - Name: enableSave
       Entry: 5
       Data: false
@@ -54,7 +54,7 @@ MonoBehaviour:
     - Name: UIWindowDataDic
       Entry: 7
       Data: 1|System.Collections.Generic.Dictionary`2[[System.String, mscorlib],[JKFrame.UIWindowData,
-        Assembly-CSharp]], mscorlib
+        JKFrame]], mscorlib
     - Name: comparer
       Entry: 7
       Data: 2|System.Collections.Generic.GenericEqualityComparer`1[[System.String,
@@ -73,7 +73,7 @@ MonoBehaviour:
       Data: UI_Dialog
     - Name: $v
       Entry: 7
-      Data: 3|JKFrame.UIWindowData, Assembly-CSharp
+      Data: 3|JKFrame.UIWindowData, JKFrame
     - Name: isCache
       Entry: 5
       Data: true
@@ -100,7 +100,7 @@ MonoBehaviour:
       Data: UI_Setting
     - Name: $v
       Entry: 7
-      Data: 4|JKFrame.UIWindowData, Assembly-CSharp
+      Data: 4|JKFrame.UIWindowData, JKFrame
     - Name: isCache
       Entry: 5
       Data: true
@@ -127,7 +127,7 @@ MonoBehaviour:
       Data: UI_StartGame
     - Name: $v
       Entry: 7
-      Data: 5|JKFrame.UIWindowData, Assembly-CSharp
+      Data: 5|JKFrame.UIWindowData, JKFrame
     - Name: isCache
       Entry: 5
       Data: false
@@ -154,7 +154,7 @@ MonoBehaviour:
       Data: UI_Tip
     - Name: $v
       Entry: 7
-      Data: 6|JKFrame.UIWindowData, Assembly-CSharp
+      Data: 6|JKFrame.UIWindowData, JKFrame
     - Name: isCache
       Entry: 5
       Data: true
@@ -180,4 +180,4 @@ MonoBehaviour:
       Entry: 8
       Data: 
   ResourcesSystemType: 1
-  SaveSystemType: 1
+  SaveSystemType: 0

@@ -2,9 +2,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
-using System.IO;
 using UnityEngine;
-using static UnityEditor.Experimental.GraphView.Port;
 
 namespace JKFrame
 {
@@ -147,7 +145,7 @@ namespace JKFrame
         {
             GameObject prefab = LoadAsset<GameObject>(assetPath);
             PoolSystem.InitGameObjectPool(keyName, maxCapacity, prefab, defaultQuantity);
-            UnloadAsset(prefab);
+            //UnloadAsset(prefab);
         }
 
         /// <summary>
@@ -160,24 +158,42 @@ namespace JKFrame
         {
             GameObject prefab = LoadAsset<GameObject>(assetPath);
             PoolSystem.InitGameObjectPool(prefab, maxCapacity, defaultQuantity);
-            UnloadAsset(prefab);
+            //UnloadAsset(prefab);
 
         }
+
 
         /// <summary>
-        /// 销毁游戏物体
-        /// </summary>
-        public static void UnloadInstance(GameObject obj)
+        /// <summary>
+        /// 加载游戏物体
+        /// 会自动考虑是否在对象池中存在
+        /// <param name="assetPath"></param>
+        /// <param name="parent"></param>
+        /// <param name="keyName"></param>
+        public static GameObject InstantiateGameObject(Transform parent, string keyName)
         {
-            GameObject.Destroy(obj);
+            GameObject go;
+            go = PoolSystem.GetGameObject(keyName, parent);
+            if (!go.IsNull()) return go;
+
+            GameObject prefab = LoadAsset<GameObject>(keyName);
+            if (!prefab.IsNull())
+            {
+                go = GameObject.Instantiate(prefab, parent);
+                go.name = keyName;
+                //UnloadAsset(prefab);
+            }
+            return go;
         }
+
+
         /// <summary>
         /// 加载游戏物体
         /// 会自动考虑是否在对象池中存在
         /// </summary>
         /// <param name="assetPath">资源路径</param>
         /// <param name="parent">父物体</param>
-        public static GameObject InstantiateGameObject(string assetPath, Transform parent = null,string keyName=null)
+        public static GameObject InstantiateGameObject(string assetPath, Transform parent = null, string keyName = null)
         {
             string assetName = GetAssetNameByPath(assetPath);
             GameObject go;
@@ -190,7 +206,7 @@ namespace JKFrame
             {
                 go = GameObject.Instantiate(prefab, parent);
                 go.name = assetName;
-                UnloadAsset(prefab);
+                //UnloadAsset(prefab);
             }
             return go;
         }
@@ -200,9 +216,24 @@ namespace JKFrame
         /// </summary>
         /// <param name="path">资源路径</param>
         /// <param name="parent">父物体</param>
-        public static T InstantiateGameObject<T>(string path, Transform parent = null, string keyName = null) where T : UnityEngine.Component
+        public static T InstantiateGameObject<T>(Transform parent, string keyName) where T : UnityEngine.Component
         {
-            GameObject go = InstantiateGameObject(path, parent, keyName);
+            GameObject go = InstantiateGameObject(parent, keyName);
+            if (!go.IsNull())
+            {
+                return go.GetComponent<T>();
+            }
+            return null;
+        }
+
+        /// <summary>
+        /// 加载游戏物体并获取组件
+        /// </summary>
+        /// <param name="path">资源路径</param>
+        /// <param name="parent">父物体</param>
+        public static T InstantiateGameObject<T>(string assetPath, Transform parent = null, string keyName = null) where T : UnityEngine.Component
+        {
+            GameObject go = InstantiateGameObject(assetPath, parent, keyName);
             if (!go.IsNull())
             {
                 return go.GetComponent<T>();
@@ -213,10 +244,10 @@ namespace JKFrame
         /// <summary>
         /// 异步实例化游戏物体
         /// </summary>
-        public static void InstantiateGameObjectAsync(string path, Action<GameObject> callBack = null, Transform parent = null, string keyName = null)
+        public static void InstantiateGameObjectAsync(string assetPath, Action<GameObject> callBack = null, Transform parent = null, string keyName = null)
         {
             // 切割路径获取实际的资源名称
-            string assetName = GetAssetNameByPath(path);
+            string assetName = GetAssetNameByPath(assetPath);
             GameObject go;
             if (keyName == null) go = PoolSystem.GetGameObject(assetName, parent);
             else go = PoolSystem.GetGameObject(keyName, parent);
@@ -227,7 +258,7 @@ namespace JKFrame
                 return;
             }
             // 不通过缓存池
-            MonoSystem.Start_Coroutine(DoInstantiateGameObjectAsync(path, callBack, parent));
+            MonoSystem.Start_Coroutine(DoInstantiateGameObjectAsync(assetPath, callBack, parent));
         }
 
 
@@ -235,9 +266,9 @@ namespace JKFrame
         /// 异步实例化游戏物体并获取组件
         /// </summary>
         /// <typeparam name="T">游戏物体上的组件</typeparam>
-        public static void InstantiateGameObjectAsync<T>(string path, Action<T> callBack = null, Transform parent = null, string keyName = null) where T : UnityEngine.Component
+        public static void InstantiateGameObjectAsync<T>(string assetPath, Action<T> callBack = null, Transform parent = null, string keyName = null) where T : UnityEngine.Component
         {
-            string assetName = GetAssetNameByPath(path);
+            string assetName = GetAssetNameByPath(assetPath);
             // 缓存字典里面有
             GameObject go;
             if (keyName == null) go = PoolSystem.GetGameObject(assetName, parent);
@@ -249,27 +280,27 @@ namespace JKFrame
                 return;
             }
             // 不通过缓存池
-            MonoSystem.Start_Coroutine(DoInstantiateGameObjectAsync<T>(path, callBack, parent));
+            MonoSystem.Start_Coroutine(DoInstantiateGameObjectAsync<T>(assetPath, callBack, parent));
         }
 
-        static IEnumerator DoInstantiateGameObjectAsync(string path, Action<GameObject> callBack = null, Transform parent = null)
+        static IEnumerator DoInstantiateGameObjectAsync(string assetPath, Action<GameObject> callBack = null, Transform parent = null)
         {
-            ResourceRequest resourceRequest = Resources.LoadAsync<GameObject>(path);
+            ResourceRequest resourceRequest = Resources.LoadAsync<GameObject>(assetPath);
             yield return resourceRequest;
             GameObject prefab = resourceRequest.asset as GameObject;
             GameObject go = GameObject.Instantiate<GameObject>(prefab);
             go.name = prefab.name;
-            UnloadAsset(prefab);
+            //UnloadAsset(prefab);
             callBack?.Invoke(go);
         }
-        static IEnumerator DoInstantiateGameObjectAsync<T>(string path, Action<T> callBack = null, Transform parent = null) where T : UnityEngine.Object
+        static IEnumerator DoInstantiateGameObjectAsync<T>(string assetPath, Action<T> callBack = null, Transform parent = null) where T : UnityEngine.Object
         {
-            ResourceRequest resourceRequest = Resources.LoadAsync<GameObject>(path);
+            ResourceRequest resourceRequest = Resources.LoadAsync<GameObject>(assetPath);
             yield return resourceRequest;
             GameObject prefab = resourceRequest.asset as GameObject;
             GameObject go = GameObject.Instantiate<GameObject>(prefab);
             go.name = prefab.name;
-            UnloadAsset(prefab);
+            //UnloadAsset(prefab);
             callBack?.Invoke(go.GetComponent<T>());
         }
         #endregion
@@ -278,9 +309,9 @@ namespace JKFrame
         /// 加载Unity资源  如AudioClip Sprite 预制体
         /// </summary>
         /// <typeparam name="T">资源类型</typeparam>
-        public static T LoadAsset<T>(string path) where T : UnityEngine.Object
+        public static T LoadAsset<T>(string assetPath) where T : UnityEngine.Object
         {
-            return Resources.Load<T>(path);
+            return Resources.Load<T>(assetPath);
         }
 
         /// <summary>
@@ -288,9 +319,9 @@ namespace JKFrame
         /// </summary>
         /// <param name="path"></param>
         /// <returns></returns>
-        private static string GetAssetNameByPath(string path)
+        private static string GetAssetNameByPath(string assetPath)
         {
-            return path.Substring(path.LastIndexOf("/") + 1);
+            return assetPath.Substring(assetPath.LastIndexOf("/") + 1);
         }
         /// <summary>
         /// 异步加载Unity资源 AudioClip Sprite GameObject(预制体)
@@ -298,14 +329,14 @@ namespace JKFrame
         /// <typeparam name="T">具体类型</typeparam>
         /// <param name="path">资源路径</param>
         /// <param name="callBack">加载完成后的回调</param>
-        public static void LoadAssetAsync<T>(string path, Action<T> callBack) where T : UnityEngine.Object
+        public static void LoadAssetAsync<T>(string assetPath, Action<T> callBack) where T : UnityEngine.Object
         {
-            MonoSystem.Start_Coroutine(DoLoadAssetAsync<T>(path, callBack));
+            MonoSystem.Start_Coroutine(DoLoadAssetAsync<T>(assetPath, callBack));
         }
 
-        static IEnumerator DoLoadAssetAsync<T>(string path, Action<T> callBack) where T : UnityEngine.Object
+        static IEnumerator DoLoadAssetAsync<T>(string assetPath, Action<T> callBack) where T : UnityEngine.Object
         {
-            ResourceRequest resourceRequest = Resources.LoadAsync<T>(path);
+            ResourceRequest resourceRequest = Resources.LoadAsync<T>(assetPath);
             yield return resourceRequest;
             callBack?.Invoke(resourceRequest.asset as T);
         }
@@ -313,17 +344,17 @@ namespace JKFrame
         /// <summary>
         /// 加载指定路径的所有资源
         /// </summary>
-        public static UnityEngine.Object[] LoadAssets(string path)
+        public static UnityEngine.Object[] LoadAssets(string assetPath)
         {
-            return Resources.LoadAll(path);
+            return Resources.LoadAll(assetPath);
         }
 
         /// <summary>
         /// 加载指定路径的所有资源
         /// </summary>
-        public static T[] LoadAssets<T>(string path) where T : UnityEngine.Object
+        public static T[] LoadAssets<T>(string assetPath) where T : UnityEngine.Object
         {
-            return Resources.LoadAll<T>(path);
+            return Resources.LoadAll<T>(assetPath);
         }
 
         /// <summary>
@@ -333,7 +364,6 @@ namespace JKFrame
         {
             Resources.UnloadAsset(assetToUnload);
         }
-
 
 
         /// <summary>

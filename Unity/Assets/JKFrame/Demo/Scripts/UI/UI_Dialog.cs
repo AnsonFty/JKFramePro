@@ -50,10 +50,10 @@ public class UI_Dialog : UI_WindowBase
     UnityAction m_CloseCallBack;//外部传入的关闭回调
     UnityAction m_OnFinishCallBack;//内部使用的打字完成回调
 
-    public override void OnInit()
+    public override void OnShow()
     {
-        base.OnInit();
-        InputManager.Instance.StartUI();
+        base.OnShow();
+        JKInputSystem.StartUI();
         ResetText();
         timer = 0;
         m_LineIndex = 0;
@@ -69,7 +69,7 @@ public class UI_Dialog : UI_WindowBase
         m_Contents = null;
         m_CloseCallBack = null;
         m_Dialogs = null;
-        InputManager.Instance.StartRole();
+        JKInputSystem.StartRole();
     }
 
     /// <summary>
@@ -224,7 +224,7 @@ public class UI_Dialog : UI_WindowBase
         int index = 0;
         string dialogId = $"{id}_{index}";
         List<Dialog> dialogs = new List<Dialog>();
-        Table table = LocalizationSystem.Table;
+        Table table = TableSystem.Table;
         while (table.DialogByID.ContainsKey(dialogId))
         {
             dialogs.Add(table.DialogByID[dialogId]);

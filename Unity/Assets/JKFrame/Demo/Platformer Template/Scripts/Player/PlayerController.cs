@@ -28,7 +28,7 @@ namespace Platformer
 
         private void Start()
         {
-            InputManager.Instance.StartRole();
+            JKInputSystem.StartRole();
             stats = GetComponent<Stats>();
             rigid2D = GetComponent<Rigidbody2D>();
             playerSprite = transform.GetChild(0);
@@ -39,11 +39,11 @@ namespace Platformer
             //add Death event
             stats.OnDeath += Death;
 
-            InputManager.Instance.AddListenerMove(Movement);
-            InputManager.Instance.AddListenerStopMove(StopMove);
-            InputManager.Instance.AddListenerRoleSubmit(Jump);
-            InputManager.Instance.AddListenerRoleActionX(MeleeAttack);
-            InputManager.Instance.AddListenerRoleActionY(RangeAttack);
+            JKInputSystem.AddListenerMove(Movement);
+            JKInputSystem.AddListenerStopMove(StopMove);
+            JKInputSystem.AddListenerRoleSubmit(Jump);
+            JKInputSystem.AddListenerRoleActionX(MeleeAttack);
+            JKInputSystem.AddListenerRoleActionY(RangeAttack);
 
             ConfigManager.Instance.Init();//临时
         }

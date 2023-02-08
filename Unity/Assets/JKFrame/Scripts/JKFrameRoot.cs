@@ -20,7 +20,7 @@ namespace JKFrame
 
         private void Awake()
         {
-            if (Instance != null&&Instance!=this) // 防止Editor下的Instance已经存在，并且是自身
+            if (Instance != null && Instance != this) // 防止Editor下的Instance已经存在，并且是自身
             {
                 Destroy(gameObject);
                 return;
@@ -46,6 +46,10 @@ namespace JKFrame
             MonoSystem.Init();
             AudioSystem.Init();
             UISystem.Init();
+            SaveSystem.Init();
+            JKInputSystem.Init();
+            LocalizationSystem.Init();
+            TableSystem.LoadAllTable();
 #if ENABLE_LOG
             JKLog.Init(FrameSetting.LogConfig);
 #endif

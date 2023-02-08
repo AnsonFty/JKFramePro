@@ -9,6 +9,13 @@ public class JKMenuItem
         string path = Application.persistentDataPath.Replace("/","\\");
         System.Diagnostics.Process.Start("explorer.exe", path);
     }
+
+    [MenuItem("JKFrame/打开配置表路径")]
+    public static void OpenExcelDirPath()
+    {
+        EditorUtility.RevealInFinder($"../Excel/Make.sh");
+    }
+
     [MenuItem("JKFrame/打开框架文档")]
     public static void OpenDoc()
     {

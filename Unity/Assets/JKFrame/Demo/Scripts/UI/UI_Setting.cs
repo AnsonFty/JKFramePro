@@ -157,11 +157,11 @@ public class UI_Setting : UI_WindowBase
             });
         }
         m_ToggleGamepadVibration.onValueChanged.AddListener(SetGamepadVibration);
-        SelectableManager.Instance.AddSelectable(m_SGroup);
+        SelectableSystem.AddSelectable(m_SGroup);
         m_CGroup.DOFade(1, 0.5f).OnComplete(delegate
         {
-            InputManager.Instance.AddListenerStart(OnClickSave);
-            InputManager.Instance.AddListenerCancel(OnClickCancel);
+            JKInputSystem.AddListenerStart(OnClickSave);
+            JKInputSystem.AddListenerCancel(OnClickCancel);
             m_BtnSave.onClick.AddListener(OnClickSave);
             m_BtnCancel.onClick.AddListener(OnClickCancel);
         });
@@ -190,7 +190,7 @@ public class UI_Setting : UI_WindowBase
         foreach (var toggleQuality in m_ToggleQualitys)
             toggleQuality.onValueChanged.RemoveAllListeners();
         m_ToggleGamepadVibration.onValueChanged.RemoveListener(SetGamepadVibration);
-        SelectableManager.Instance.Return();
+        SelectableSystem.Return();
     }
 
     public void OnClickLastLanguage()
@@ -212,16 +212,16 @@ public class UI_Setting : UI_WindowBase
 
     public void RemoveAllListener()
     {
-        InputManager.Instance.RemoveListenerStart(OnClickSave);
-        InputManager.Instance.RemoveListenerCancel(OnClickCancel);
+        JKInputSystem.RemoveListenerStart(OnClickSave);
+        JKInputSystem.RemoveListenerCancel(OnClickCancel);
         m_BtnSave.onClick.RemoveListener(OnClickSave);
         m_BtnCancel.onClick.RemoveListener(OnClickCancel);
     }
 
     public void AddAllListener()
     {
-        InputManager.Instance.AddListenerStart(OnClickSave);
-        InputManager.Instance.AddListenerCancel(OnClickCancel);
+        JKInputSystem.AddListenerStart(OnClickSave);
+        JKInputSystem.AddListenerCancel(OnClickCancel);
         m_BtnSave.onClick.AddListener(OnClickSave);
         m_BtnCancel.onClick.AddListener(OnClickCancel);
     }

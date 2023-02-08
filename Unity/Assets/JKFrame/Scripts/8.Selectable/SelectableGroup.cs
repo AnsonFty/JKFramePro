@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
@@ -5,7 +6,14 @@ using UnityEngine.UI;
 
 public class SelectableGroup : MonoBehaviour
 {
+    /// <summary>
+    /// 使用返回时根据m_CurrentGameObject来判断返回时导航到哪一个Selectable，如果固定只导航一个，那么只拖入一个即可
+    /// </summary>
     public List<Selectable> Selectables;
+    /// <summary>
+    /// 如果使用返回时到上一个界面触发的委托
+    /// </summary>
+    public Action ActionReturn;
     GameObject m_CurrentGameObject;
     bool m_Lock;
 

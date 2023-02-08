@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.EventSystems;
@@ -10,8 +11,15 @@ public class BaseButton : Button
     [SerializeField] bool m_UseClickScale = true;
     [SerializeField] SelectableGroup m_SelectableGroup;
     [SerializeField] MaskableGraphic[] m_ChangeSelectColors;
-    public UnityEvent OnSelectEvent;
-    public UnityEvent OnDeselectEvent;
+
+    [Serializable]
+    public class SelectEvent : UnityEvent { }
+
+    [SerializeField]
+    private SelectEvent m_OnSelect = new SelectEvent();
+
+    [SerializeField]
+    private SelectEvent m_OnDeSelect = new SelectEvent();
 
     public SelectableGroup SelectableGroup => m_SelectableGroup;
     public override void OnPointerEnter(PointerEventData eventData) 
@@ -42,7 +50,7 @@ public class BaseButton : Button
             m_SelectableGroup.CurrentGameObject = gameObject;
         foreach (var image in m_ChangeSelectColors)
             image.color = colors.selectedColor;
-        OnSelectEvent?.Invoke();
+        m_OnSelect?.Invoke();
     }
 
     public override void OnDeselect(BaseEventData eventData)
@@ -50,6 +58,6 @@ public class BaseButton : Button
         base.OnDeselect(eventData);
         foreach (var image in m_ChangeSelectColors)
             image.color = colors.normalColor;
-        OnDeselectEvent?.Invoke();
+        m_OnDeSelect?.Invoke();
     }
 }

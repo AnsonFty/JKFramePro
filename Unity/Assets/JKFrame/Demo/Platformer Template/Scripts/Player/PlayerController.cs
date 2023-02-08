@@ -45,7 +45,7 @@ namespace Platformer
             JKInputSystem.AddListenerRoleActionX(MeleeAttack);
             JKInputSystem.AddListenerRoleActionY(RangeAttack);
 
-            ConfigManager.Instance.Init();//临时
+            //ConfigManager.Instance.Init();//临时
         }
 
         public void FixedUpdate()

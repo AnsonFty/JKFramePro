@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:Unity/Assets/JKFrame/Plugins/InputIcons/Examples.meta
 guid: 5ef0d0ebfeccdf745985ef6964bd64d2
+========
+guid: 081bdef77814f0c4db8602793541e55f
+>>>>>>>> 3e453e651006c968b76414bd8b298c78d62ee13b:Unity/Assets/JKFrame/Plugins/InputIcons.meta
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}

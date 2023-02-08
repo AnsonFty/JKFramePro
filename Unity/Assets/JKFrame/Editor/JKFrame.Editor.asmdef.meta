@@ -1,6 +1,11 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:Unity/Assets/JKFrame/Editor/JKFrame.Editor.asmdef.meta
 guid: d948e97dec84774448303ee45e9a13f7
 AssemblyDefinitionImporter:
+========
+guid: ee495364a19f4904daaff1a0b0c9be0a
+PrefabImporter:
+>>>>>>>> 3e453e651006c968b76414bd8b298c78d62ee13b:Unity/Assets/JKFrame/Plugins/InputIcons/Examples/Prefabs/II_AttackEffect1.prefab.meta
   externalObjects: {}
   userData: 
   assetBundleName: 

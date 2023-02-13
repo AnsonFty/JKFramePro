@@ -62,6 +62,7 @@ ipch/
 /Assets/EasyFrame/Plugins/Sirenix/Assemblies/NoEditor/*.meta
 /Assets/EasyFrame/Plugins/Sirenix/Assemblies/NoEmitAndNoEditor/*.meta
 /Assets/EasyFrame/Plugins/Sirenix/Assemblies/*.meta
+/Assets/Unity/Assets/Resources.meta
 /Assets/Resources/DOTweenSettings.asset
 /Assets/Resources/DOTweenSettings.asset.meta
 /Unity.sln

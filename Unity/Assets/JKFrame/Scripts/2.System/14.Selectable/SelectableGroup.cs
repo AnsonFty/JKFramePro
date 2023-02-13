@@ -7,11 +7,11 @@ using UnityEngine.UI;
 public class SelectableGroup : MonoBehaviour
 {
     /// <summary>
-    /// Ê¹ÓÃ·µ»ØÊ±¸ù¾İm_CurrentGameObjectÀ´ÅĞ¶Ï·µ»ØÊ±µ¼º½µ½ÄÄÒ»¸öSelectable£¬Èç¹û¹Ì¶¨Ö»µ¼º½Ò»¸ö£¬ÄÇÃ´Ö»ÍÏÈëÒ»¸ö¼´¿É
+    /// ä½¿ç”¨è¿”å›æ—¶æ ¹æ®m_CurrentGameObjectæ¥åˆ¤æ–­è¿”å›æ—¶å¯¼èˆªåˆ°å“ªä¸€ä¸ªSelectableï¼Œå¦‚æœå›ºå®šåªå¯¼èˆªä¸€ä¸ªï¼Œé‚£ä¹ˆåªæ‹–å…¥ä¸€ä¸ªå³å¯
     /// </summary>
     public List<Selectable> Selectables;
     /// <summary>
-    /// Èç¹ûÊ¹ÓÃ·µ»ØÊ±µ½ÉÏÒ»¸ö½çÃæ´¥·¢µÄÎ¯ÍĞ
+    /// å¦‚æœä½¿ç”¨è¿”å›æ—¶åˆ°ä¸Šä¸€ä¸ªç•Œé¢è§¦å‘çš„å§”æ‰˜
     /// </summary>
     public Action ActionReturn;
     GameObject m_CurrentGameObject;

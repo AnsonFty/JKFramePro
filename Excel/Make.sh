@@ -7,7 +7,7 @@ go build -v -o ./tabtoy github.com/davyxu/tabtoy
 ./tabtoy -mode=v3 \
 -index=Index.xlsx \
 -package=main \
--csharp_out=../Unity/Assets/JKFrame/Scripts/10.Table/table_gen.cs \
+-csharp_out=../Unity/Assets/JKFrame/Scripts/2.System/11.Table/table_gen.cs \
 -binary_out=../Unity/Assets/JKFrame/Table/table_gen.bin \
 
 if [ $? -ne 0 ] ; then

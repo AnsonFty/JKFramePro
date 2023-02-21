@@ -7,7 +7,7 @@ using UnityEngine.UI;
 namespace JKFrame
 {
     /// <summary>
-    /// Õû¸öÓÎÏ·Ö»ÓĞÒ»¸öUpdate¡¢LateUpdateµÈ
+    /// æ•´ä¸ªæ¸¸æˆåªæœ‰ä¸€ä¸ªUpdateã€LateUpdateç­‰
     /// </summary>
     public class MonoSystem : MonoBehaviour
     {
@@ -22,8 +22,9 @@ namespace JKFrame
             instance = JKFrameRoot.RootTransform.GetComponent<MonoSystem>();
         }
 
+        #region ç”Ÿå‘½å‘¨æœŸå‡½æ•°
         /// <summary>
-        /// Ìí¼ÓUpdate¼àÌı
+        /// æ·»åŠ Updateç›‘å¬
         /// </summary>
         /// <param name="action"></param>
         public static void AddUpdateListener(Action action)
@@ -32,7 +33,7 @@ namespace JKFrame
         }
 
         /// <summary>
-        /// ÒÆ³ıUpdate¼àÌı
+        /// ç§»é™¤Updateç›‘å¬
         /// </summary>
         /// <param name="action"></param>
         public static void RemoveUpdateListener(Action action)
@@ -41,7 +42,7 @@ namespace JKFrame
         }
 
         /// <summary>
-        /// Ìí¼ÓLateUpdate¼àÌı
+        /// æ·»åŠ LateUpdateç›‘å¬
         /// </summary>
         /// <param name="action"></param>
         public static void AddLateUpdateListener(Action action)
@@ -50,7 +51,7 @@ namespace JKFrame
         }
 
         /// <summary>
-        /// ÒÆ³ıLateUpdate¼àÌı
+        /// ç§»é™¤LateUpdateç›‘å¬
         /// </summary>
         /// <param name="action"></param>
         public static void RemoveLateUpdateListener(Action action)
@@ -59,7 +60,7 @@ namespace JKFrame
         }
 
         /// <summary>
-        /// Ìí¼ÓFixedUpdate¼àÌı
+        /// æ·»åŠ FixedUpdateç›‘å¬
         /// </summary>
         /// <param name="action"></param>
         public static void AddFixedUpdateListener(Action action)
@@ -68,7 +69,7 @@ namespace JKFrame
         }
 
         /// <summary>
-        /// ÒÆ³ıFixedUpdate¼àÌı
+        /// ç§»é™¤FixedUpdateç›‘å¬
         /// </summary>
         /// <param name="action"></param>
         public static void RemoveFixedUpdateListener(Action action)
@@ -89,13 +90,13 @@ namespace JKFrame
             fixedUpdateEvent?.Invoke();
         }
 
-
-        #region Ğ­³Ì
+        #endregion
+        #region åç¨‹
         private Dictionary<object, List<Coroutine>> coroutineDic = new Dictionary<object, List<Coroutine>>();
         private static ObjectPoolModule poolModule = new ObjectPoolModule();
 
         /// <summary>
-        /// Æô¶¯Ò»¸öĞ­³ÌĞò
+        /// å¯åŠ¨ä¸€ä¸ªåç¨‹åº
         /// </summary>
         public static Coroutine Start_Coroutine(IEnumerator coroutine)
         {
@@ -103,7 +104,7 @@ namespace JKFrame
         }
 
         /// <summary>
-        /// Æô¶¯Ò»¸öĞ­³ÌĞò²¢ÇÒ°ó¶¨Ä³¸ö¶ÔÏó
+        /// å¯åŠ¨ä¸€ä¸ªåç¨‹åºå¹¶ä¸”ç»‘å®šæŸä¸ªå¯¹è±¡
         /// </summary>
         public static Coroutine Start_Coroutine(object obj,IEnumerator coroutine)
         {
@@ -119,7 +120,7 @@ namespace JKFrame
         }
 
         /// <summary>
-        /// Í£Ö¹Ò»¸öĞ­³ÌĞò²¢»ùÓÚÄ³¸ö¶ÔÏó
+        /// åœæ­¢ä¸€ä¸ªåç¨‹åºå¹¶åŸºäºæŸä¸ªå¯¹è±¡
         /// </summary>
         public static void Stop_Coroutine(object obj,Coroutine routine)
         {
@@ -131,7 +132,7 @@ namespace JKFrame
         }
 
         /// <summary>
-        /// Í£Ö¹Ò»¸öĞ­³ÌĞò
+        /// åœæ­¢ä¸€ä¸ªåç¨‹åº
         /// </summary>
         public static void Stop_Coroutine(Coroutine routine)
         {
@@ -139,7 +140,7 @@ namespace JKFrame
         }
 
         /// <summary>
-        /// Í£Ö¹Ä³¸ö¶ÔÏóµÄÈ«²¿Ğ­³Ì
+        /// åœæ­¢æŸä¸ªå¯¹è±¡çš„å…¨éƒ¨åç¨‹
         /// </summary>
         public static void StopAllCoroutine(object obj)
         {
@@ -155,11 +156,11 @@ namespace JKFrame
         }
 
         /// <summary>
-        /// Õû¸öÏµÍ³È«²¿Ğ­³Ì¶¼»áÍ£Ö¹
+        /// æ•´ä¸ªç³»ç»Ÿå…¨éƒ¨åç¨‹éƒ½ä¼šåœæ­¢
         /// </summary>
         public static void StopAllCoroutine()
         {
-            // È«²¿Êı¾İ¶¼»áÎŞĞ§
+            // å…¨éƒ¨æ•°æ®éƒ½ä¼šæ— æ•ˆ
             foreach (List<Coroutine> item in instance.coroutineDic.Values)
             {
                 item.Clear();

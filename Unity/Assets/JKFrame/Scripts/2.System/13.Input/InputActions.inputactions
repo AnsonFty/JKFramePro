@@ -325,6 +325,17 @@
                 },
                 {
                     "name": "",
+                    "id": "e14fe4ae-fe63-4a51-a7b3-d619b1bef831",
+                    "path": "<Keyboard>/escape",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard&Mouse",
+                    "action": "Cancel",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "738c13ec-60e5-4848-a83c-b55a43bd6a41",
                     "path": "<Keyboard>/numpad0",
                     "interactions": "",

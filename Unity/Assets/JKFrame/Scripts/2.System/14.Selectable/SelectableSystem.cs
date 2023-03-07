@@ -26,7 +26,7 @@ public static class SelectableSystem
         if (baseToggle != null)
             baseToggle.isOn = false;
         selectableGroup.Lock = false;
-        UnityEngine.EventSystems.EventSystem.current.SetSelectedGameObject(selectableGroup.CurrentGameObject);
+        EventSystem.current.SetSelectedGameObject(selectableGroup.CurrentGameObject);
     }
 
     public static bool Lock

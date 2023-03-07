@@ -106,10 +106,10 @@ namespace JKFrame
         /// <summary>
         /// 启动一个协程序并且绑定某个对象
         /// </summary>
-        public static Coroutine Start_Coroutine(object obj,IEnumerator coroutine)
+        public static Coroutine Start_Coroutine(object obj, IEnumerator coroutine)
         {
             Coroutine _coroutine = instance.StartCoroutine(coroutine);
-            if (!instance.coroutineDic.TryGetValue(obj,out List<Coroutine> coroutineList))
+            if (!instance.coroutineDic.TryGetValue(obj, out List<Coroutine> coroutineList))
             {
                 coroutineList = poolModule.GetObject<List<Coroutine>>();
                 if (coroutineList == null) coroutineList = new List<Coroutine>();
@@ -122,7 +122,7 @@ namespace JKFrame
         /// <summary>
         /// 停止一个协程序并基于某个对象
         /// </summary>
-        public static void Stop_Coroutine(object obj,Coroutine routine)
+        public static void Stop_Coroutine(object obj, Coroutine routine)
         {
             if (instance.coroutineDic.TryGetValue(obj, out List<Coroutine> coroutineList))
             {

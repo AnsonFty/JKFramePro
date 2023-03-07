@@ -10,7 +10,7 @@ namespace JKFrame
     public static class ResSystem
     {
 
-#region 普通class对象
+        #region 普通class对象
         /// <summary>
         /// 获取实例-普通Class
         /// 如果类型需要缓存，会从对象池中获取
@@ -50,7 +50,7 @@ namespace JKFrame
         /// 基于KeyName存放
         /// </summary>
         public static void PushObjectInPool(object obj, string keyName)
-        { 
+        {
             PoolSystem.PushObject(obj, keyName);
         }
 
@@ -93,9 +93,9 @@ namespace JKFrame
             PoolSystem.InitObjectPool(type, maxCapacity);
         }
 
-#endregion
+        #endregion
 
-#region 游戏物体
+        #region 游戏物体
         /// <summary>
         /// 初始化一个GameObject类型的对象池类型
         /// </summary>  
@@ -105,7 +105,7 @@ namespace JKFrame
         /// <param name="assetName">AB资源名称</param>
         public static void InitGameObjectPoolForKeyName(string keyName, int maxCapacity = -1, string assetName = null, int defaultQuantity = 0)
         {
-            if (defaultQuantity<=0 || assetName ==null)
+            if (defaultQuantity <= 0 || assetName == null)
             {
                 PoolSystem.InitGameObjectPool(keyName, maxCapacity, null, 0);
             }
@@ -181,9 +181,9 @@ namespace JKFrame
         /// <param name="autoRelease">物体销毁时，会自动去调用一次Addressables.Release</param>
         public static GameObject InstantiateGameObject(string assetName, Transform parent = null, string keyName = null, bool autoRelease = true)
         {
-            GameObject go ;
+            GameObject go;
             if (keyName == null) go = PoolSystem.GetGameObject(assetName, parent);
-            else go = PoolSystem.GetGameObject(keyName,parent);
+            else go = PoolSystem.GetGameObject(keyName, parent);
             if (go.IsNull() == false) return go;
             else
             {
@@ -192,7 +192,7 @@ namespace JKFrame
                 {
                     go.transform.OnReleaseAddressableAsset<int>(AutomaticReleaseAssetAction);
                 }
-                go.name = keyName!=null?keyName:assetName;
+                go.name = keyName != null ? keyName : assetName;
             }
             return go;
         }
@@ -219,7 +219,7 @@ namespace JKFrame
         /// <param name="keyName">对象池中的分组名称，可为Null</param>
         /// <param name="parent">父物体</param>
         /// <param name="autoRelease">物体销毁时，会自动去调用一次Addressables.Release</param>
-        public static T InstantiateGameObject<T>(string assetName, Transform parent = null, string keyName = null,  bool autoRelease = true) where T : Component
+        public static T InstantiateGameObject<T>(string assetName, Transform parent = null, string keyName = null, bool autoRelease = true) where T : Component
         {
             GameObject go = InstantiateGameObject(assetName, parent, keyName, autoRelease);
             if (go.IsNull() == false) return go.GetComponent<T>();
@@ -233,7 +233,7 @@ namespace JKFrame
         {
             Addressables.ReleaseInstance(obj);
         }
-        
+
         /// <summary>
         /// 异步加载游戏物体
         /// </summary>
@@ -281,7 +281,7 @@ namespace JKFrame
 
         }
 
-        static IEnumerator DoLoadGameObjectAsync(string assetName, Action<GameObject> callBack = null, Transform parent = null, bool autoRelease = true) 
+        static IEnumerator DoLoadGameObjectAsync(string assetName, Action<GameObject> callBack = null, Transform parent = null, bool autoRelease = true)
         {
             AsyncOperationHandle<GameObject> request = Addressables.InstantiateAsync(assetName, parent);
             yield return request;
@@ -376,7 +376,7 @@ namespace JKFrame
         {
             return Addressables.ReleaseInstance(obj);
         }
-#endregion
+        #endregion
     }
 }
 #endif

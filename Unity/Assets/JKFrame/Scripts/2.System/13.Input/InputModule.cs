@@ -45,7 +45,11 @@ public class InputModule : MonoBehaviour
     void OnUpdate()
     {
         if (Input.GetKeyDown(KeyCode.Escape))
+        {
             m_CommonInput.Cancel();
+            m_RoleInput.Cancel();
+        }
+            
         if (AnyKey != null && Input.anyKey)
             AnyKey.Invoke();
     }

@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
@@ -37,12 +38,13 @@ public class SelectableGroup : MonoBehaviour
             if (value)
                 EventSystem.current.SetSelectedGameObject(null);
             else
-                Invoke("SetDefaultSelected", 0.001f);
+                StartCoroutine(SetDefaultSelected());
         }
     }
 
-    void SetDefaultSelected()
+    IEnumerator SetDefaultSelected()
     {
+        yield return null;
         if (!Lock)
         {
             EventSystem sys = EventSystem.current;

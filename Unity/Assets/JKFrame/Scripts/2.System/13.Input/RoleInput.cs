@@ -98,6 +98,11 @@ public class RoleInput : ScriptableObject, InputActions.IRoleActions
         }
     }
 
+    public void Cancel()
+    {
+        onCancel?.Invoke();
+    }
+
     public void RemoveAllListenerCancel()
     {
         onCancel = null;
@@ -107,7 +112,8 @@ public class RoleInput : ScriptableObject, InputActions.IRoleActions
     {
         if (context.phase == InputActionPhase.Performed)
         {
-            onCancel?.Invoke();
+            if (context.control.name != "escape")
+                onCancel?.Invoke();
         }
     }
 
